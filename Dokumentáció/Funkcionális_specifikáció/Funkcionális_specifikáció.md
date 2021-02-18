@@ -24,6 +24,28 @@ emailben, vagy telefonon jogosult esetleges információhiány, vagy technikai p
 A tulajdonos adatokat küldhet és törölhet, valamint extra szolgáltatásokat kérvényezhet a továbbiakban, azonban a 
 szerkesztést és az üzemeltetést a jövőben kötendő szerződés felbontásáig cégünk végzi.
 
+## 3. Vágyálomrendszer leírása
+
+A program elindításakor valászthatunk, hogy létrehozunk-e egy új profilt, vagy egy már 
+létezővel jelentkezünk be. Amennyiben új profilt kívánunk létrehozni megjelenik egy ablak, 
+ahol felhasználónevünk megadását követően kérvényez tőlünk egy kódot, melynek megerősítését 
+követően létrehozza a személyi fiókunkat. Abban az esetben, ha már előzetesen ezt megtettük 
+jelszavunk megadását követően léptet be minket a központi egységbe. 
+A központi egység béta módban lehetőséget kell hogy biztosítson az alábbi menüpontok kiválasztására 
+- Új karakter generálása
+    1. **Gyors generálás:**
+    - A gyors generálás egyetlen ok gomb lenyomására, mindössze a 4 legalapvetőbb adat(név, faj, kaszt, szint) 
+    -melyek egy felugró ablakban lesznek elérhetőek- megadásával elkészíti valamennyi statisztikát és rendelkezésünkre bocsájtja a kívánt terméket.
+    2. **Pontértékek manuális elosztása:**
+    - Manuális elosztás esetén az oldal egy új lapra vezet, ahol táblázatokra rendezve láthatjuk a 
+készülő művet, valamint a rendelkezésre álló erőforrásokat, költségeivel. Itt scrollbarok valamely 
+típusának felhasználásával állíthatjuk be a kívánt értékeket. A pontok elosztását követően szintén 
+egy ok gomb véglegesíti a művet, mely tárolásra kerül a rendszerben.
+Az értékeket adatbázisban tároljuk, ez lehet ms-, vagy mysql.
+- Már létező karakter kiválasztása
+    1. Ha már korábban elkészített karakterünket kívánjuk kiválasztani opcióként megjelenik a karakter szerkesztése, mely az első jóváhagyott tp érkezéséig lehetséges. A karakter törlése pedig eltávolítja a lapot. A szerzett tp-k elosztása segítségével lehet az extra pontokat hozzáadni a már meglévőkhöz,ebben egy itt megjelenő táblázat lesz a felhasználó segítségére.
+
+
 ## 4. Rendszerre vonatkozó megszorítások
 
 A rendszerre vonatkozó külső megszorítások: pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
