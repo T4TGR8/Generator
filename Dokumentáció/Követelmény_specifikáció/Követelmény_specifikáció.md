@@ -28,13 +28,9 @@ a cél, de sok jó embernek lenne ez hasznos segédlet.
 
 ## 5. Igényelt üzleti folyamatok modellje
 
-- Egy szoftver fejlesztése szórakoztatás céljából.
-- Az ügyfél a szoftver segítségével egy életkor, faj, szint és cast megadásával egy karaktert generál magának,
-  amit egy szerepjátékban tud használni.
-- A generált karaktereknek reálisnak kell lenniük.
-- Karakterek eltárolása, ha a játék valamilyen okból megszakadna, akkor könnyen folytatható legyen.
-- Karakter bizonyos adatainak változtatása.
-- Használati útmutatót mellékelünk a szoftver használatáról.
+Szeretnénk elkerülni a hosszadalmas karakter adatok megadását. -> Program indítása -> Alap adatok megadása(faj, életkor, cast, szint) ->
+Egy gombra kattintva a program generál egy karaktert -> Megnézhatjük a karaktert -> Ha elnyeri tetszésünket elmenthetjük egy gombra kattintva ->
+Ha nem, akkor egy másik gombra kattintva újat generálhatunk -> Ezek után az elmentett karakterünket használhatjuk és változtathatjuk szükség esetén
 
 ## 6. Követelmény lista
 ### I) Funkcionális követelmények
