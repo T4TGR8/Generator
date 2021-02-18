@@ -79,6 +79,18 @@ Szeretnénk elkerülni a hosszadalmas karakter adatok megadását. -> Program in
 Egy gombra kattintva a program generál egy karaktert -> Megnézhatjük a karaktert -> Ha elnyeri tetszésünket elmenthetjük egy gombra kattintva ->
 Ha nem, akkor egy másik gombra kattintva újat generálhatunk -> Ezek után az elmentett karakterünket használhatjuk és változtathatjuk szükség esetén
 
+## 8. Használati esetek
+
+#### Szereplők:
+**játékos:** Az a felhasználó, aki bejelentkezést követően jogosult használni az alkalmazás számára 
+létrehozott felületeit. Karaktert generálhat, melyet módosíthat, törölhet, engedély esetén részt 
+vehet játékokban, hozzáférhet a kockadobás szimulációhoz, véleményezheti a készülő új elemeket.
+**kalandmester:**
+a játékok szervezését lebonyolító felhasználó, nem admin!, tehát extra jogosultságokkal
+nem bír, a felhasználók adatainak szerkesztésére semmilyen formában nem jogosult, ugyanakkor a későbbi
+verziók főleg erre a topicra fognak fókuszálni, hogy lehetővé tegyék játékok online lebonyolítását
+és megszervezését.
+
 ## 11. Forgatókönyv
 
 - A felhasználó bármilyen operációs rendszeren keresztül tudja majd használni a szoftvert.
