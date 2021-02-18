@@ -1,3 +1,16 @@
+2. Vágyálomrendszer
+
+	A projekt célja egy olyan applikáció alapjainak lerakása, ami megkönnyítheti a hétvégi asztali 
+	játékra való felkészülést és részvételt, a hosszadalmas felkészülési procedúrát lerövidítve 
+	a munkával, családdal terhelt sorstársainknak elérhetővé teszi a szórakozás ezen formáját.
+	Az alapvető adatok megadása után elkészíti a karakterlapot, valamint egyéb hasznos funkciókkal 
+	segíti a kalandmesterek munkáját. Ideális lenne, ha letölthető és online is használható lenne a 
+	program és később akár mobiltelefonos környezetbe is átültetnénk. Regisztáció szükséges lenne, 
+	így egy programról akár több személy is igénybe tudná venni a szolgáltatást egymástól elszeparáltan.
+	A kockák/harcok szimulálására egy kocka/harc generátort is létre lehetne hozni a későbbiekben, 
+	jelen kereteinktől elkülönülve. Bár talán hihetetlennek tűnik és nyilván nem tömegigények kielégítése 
+	a cél, de sok jó embernek lenne ez hasznos segédlet.
+
 3. A rendszerre vonatkozó pályázatok, törvények, rendeletek, szabványok és ajánlások felsorolása
 
 	- 2016. évi XCIII. törvény a szerzői jogok és a szerzői joghoz kapcsolódó jogok közös kezeléséről
@@ -23,6 +36,20 @@
 	- Karakter bizonyos adatainak változtatása.
 	- Használati útmutatót mellékelünk a szoftver használatáról.
 
+6. Követelmény lista
+	I) Funkcionális követelmények
+		Regisztráció lehetősége, több felhasználó kezeléséhez.
+		2 féle külön generálás lehetősége a generálásra a rendelkezésre álló idő függvényében.
+		Külön ablakok elkészítése valamennyi opcionális lehetőséghez a hozzá tartozó adatokkal, listákkal
+		átlátható, könnyen kezelhető formában.
+		A generálást követően a lapokon szereplő adatok integrálása egy nagyobb rendszerbe, melyből a 
+		későbbiek során egy teljeskörű szolgáltatás állhat össze.
+	
+	II) Nem funkcionális követelmények
+		Felhasználóbarát, ergonomikus elrendezés és kinézet.
+		Gyors működés.
+		Biztonságos működés: jelszavak tárolása, funkciókhoz való hozzáférés.
+		
 8. Fogalomszótár
 
 	- Bug: fejlesztési hiba, ami miatt a program egy nem a várt eredményt ad. 
