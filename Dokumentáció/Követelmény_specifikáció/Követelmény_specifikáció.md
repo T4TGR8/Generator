@@ -53,16 +53,15 @@ Ha nem, akkor egy másik gombra kattintva újat generálhatunk -> Ezek után az 
 
 ## 6. Követelmény lista
 ### I) Funkcionális követelmények
-Regisztráció lehetősége, több felhasználó kezeléséhez.
-2 féle külön generálás lehetősége a generálásra a rendelkezésre álló idő függvényében.
+Regisztráció lehetősége, több felhasználó kezeléséhez.\
+2 féle külön generálás lehetősége a generálásra a rendelkezésre álló idő függvényében.\
 Külön ablakok elkészítése valamennyi opcionális lehetőséghez a hozzá tartozó adatokkal, listákkal
-átlátható, könnyen kezelhető formában.
-A generálást követően a lapokon szereplő adatok integrálása egy nagyobb rendszerbe, melyből a 
-későbbiek során egy teljeskörű szolgáltatás állhat össze.
+átlátható, könnyen kezelhető formában.\
+A generálást követően a lapokon szereplő adatok integrálása egy nagyobb rendszerbe, melyből a későbbiek során egy teljeskörű szolgáltatás állhat össze.
 	
 ### II) Nem funkcionális követelmények
-Felhasználóbarát, ergonomikus elrendezés és kinézet.
-Gyors működés.
+Felhasználóbarát, ergonomikus elrendezés és kinézet.\
+Gyors működés.\
 Biztonságos működés: jelszavak tárolása, funkciókhoz való hozzáférés.
 
 ## 7. Irányított és szabad szöveges riportok szövege
@@ -78,31 +77,28 @@ a múltkor haver? Elment az egész délutánunk az együtt töltött időnk fele
 kedve semmihez, inkább ittunk mint a meszes?\
 **Kivitelező:** Igen, az tényleg nagyon demoralizáló volt.  
 **Megrendelő:** Arra gondoltam, ha esetleg elkészülhetnének gyorsabban azok a karakterek talán legközelebb 
-nem lennénk tök részegek amire action menne?  
+nem lennénk tök részegek amire action menne?\
 **Kivitelező:** Írtam már hasonlót, de sokat kellene szenvedni a javaban a gui-val. Szerintem benne van a 
-fejlődés lehetősége. Teljes verziójában bőven több mint egy ilyen projekt, szerintem mehet.  
-**Megrendelő:** Az szuper, akkor légyszi tervezzetek már egy ilyet!  
-**Kivitelező:** Hogyne csináljuk, ha kell valami később csak szólj, pontosítsd az elképzeléseidet.  
-**Megrendelő:** Rendben, szia!  
-**Kivitelező:** Szia!  
-
-***2 órával később***  
-**Megrendelő:** Jah most jut eszembe, ha csináljátok, akkor legyen már a gyors opció mellett hagyományos is és 
-rakjátok bele külön az összes leírást stringbe!  
-**Kivitelező:** Gépírókisasszonynak nézel minket, vagy mi a fene?  
-**Megrendelő:** Nem, csak ilyen formátumban lehet még összerakni is lenne kedvem.  
-
-***kb. 1 nappal később***  
+fejlődés lehetősége. Teljes verziójában bőven több mint egy ilyen projekt, szerintem mehet.\
+**Megrendelő:** Az szuper, akkor légyszi tervezzetek már egy ilyet!\
+**Kivitelező:** Hogyne csináljuk, ha kell valami később csak szólj,
+pontosítsd az elképzeléseidet.\
+**Megrendelő:** Rendben, szia!\
+**Kivitelező:** Szia!\
+***2 órával később***\
+**Megrendelő:** Jah most jut eszembe, ha csináljátok, akkor legyen már a gyors opció mellett hagyományos is és
+rakjátok bele külön az összes leírást stringbe!\
+**Kivitelező:** Gépírókisasszonynak nézel minket, vagy mi a fene?\
+**Megrendelő:** Nem, csak ilyen formátumban lehet még összerakni is lenne kedvem.\
+***kb. 1 nappal később***\
 **Megrendelő:** Most jut eszembe, ugyan a googliba van beépítve kocka szimulátor, de rakhatnátok alá olyat is, 
-jól néz ki és nem kellene telefont nyomkodni vagy váltogatni közben.  
+jól néz ki és nem kellene telefont nyomkodni vagy váltogatni közben.\
 **Kivitelező:** Még bevgrafozzak is? Nem elég nekem a szörnyű emlék tavalyról? Ukrajnában az elmúlt 100 
-évben nem vérzett el annyi ember, pedig a hemophilia gyakori arrafele.  
-
-***77 órával később hajnali 2 óra 17 perckor***
-**Megrendelő:** Még eszembe jutott, hogy esetleg, ha a KM-nek is lenne felület felvinni az enemyket.  
+évben nem vérzett el annyi ember, pedig a hemophilia gyakori arrafele.\
+***77 órával később hajnali 2 óra 17 perckor***\
+**Megrendelő:** Még eszembe jutott, hogy esetleg, ha a KM-nek is lenne felület felvinni az enemyket.\
 **Kivitelező:** Megyek játszok magammal egy hangmant.  
 
-		
 ## 8. Fogalomszótár
 
 - Bug: fejlesztési hiba, ami miatt a program egy nem a várt eredményt ad. 
