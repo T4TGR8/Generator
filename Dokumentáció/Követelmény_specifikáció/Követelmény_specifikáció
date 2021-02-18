@@ -1,1 +1,21 @@
 start
+
+
+3. A rendszerre vonatkozó pályázatok, törvények, rendeletek, szabványok és ajánlások felsorolása
+
+	- 2016. évi XCIII. törvény a szerzői jogok és a szerzői joghoz kapcsolódó jogok közös kezeléséről
+	- A pályázatban leírt időnek és kriteriumoknak meg kell felelni. Átadási határidő: 2021.05.08.
+	- Az alkalmazás nem használ fizetőeszközt ezért kiskorúak is használhatják.
+	- A magyar törvénykönyv pontajainak meg kell felelni.
+	- Számítogépes szabványoknak meg kell felelnie, későbiekkben esetlegesen webbőngésző szabványainak is.
+
+
+5. Igényelt üzleti folyamatok modellje
+
+	- Egy szoftver fejlesztése szórakoztatás céljából.
+	- Az ügyfél a szoftver segítségével egy életkor, faj, szint és cast megadásával egy karaktert generál magának,
+	  amit egy szerepjátékban tud használni.
+	- A generált karaktereknek reálisnak kell lenniük.
+	- Karakterek eltárolása, ha a játék valamilyen okból megszakadna, akkor könnyen folytatható legyen.
+	- Karakter bizonyos adatainak változtatása.
+	- Használati útmutatót mellékelünk a szoftver használatáról.
