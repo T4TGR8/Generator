@@ -1,3 +1,49 @@
+# Funkcionális specifikáció
+
+## 1. Rendszer céljai és nem céljai 
+
+Az elkészítendő szoftver célja, hogy a megrendelők szabadidős tevékenységéhez könnyű és egyszerűen 
+használható segédletet nyújtson. Jelenleg a megrendelők nem, vagy csak ritkán élnek ezen kikapcsolódási 
+móddal, a már többször kihangsúlyozott időterhek miatt. A szoftver interneten való elérhetővé tétele 
+segítségével további potenciális ügyfelek tucatjainak nyújthat segítséget. 
+A szoftvernek nem célja teljes egészében kiváltani a papír alapú játékot, vagy kizárólag online formában 
+való működés, mindössze a személyes kontaktok során felmerülő problémák áthidalása. Nem célja profitorientált, 
+piaci alapú felhasználás, bármilyen kereskedelmi tevékenység. Nem célja az interakciók automatizálása, 
+a szellemi szabadság manufaktúra üzemmé alakítása.
+A rendszer célja, hogy a java olyan eleddig nem ismert, nem tanult részeinek elsajátítása, kisebb extra 
+programok megismerése, valamint a jelenlegi ismeretek felfrissítése, szinten tartása.
+
+## 2. Jelenlegi helyzet leírása
+
+Egy olyan rendszer megvalósítása amely a funkcionális specifikációban leírt vágyálomrendszernek megfelel.
+Célunk egy offline felület kialakítása, mely lehetővé teszi, hogy a felhasználók karakterlapokat alkothassanak 
+maguknak minél egyszerűbben és gyorsabban, miközben könnyű hozzáférhetőséget teszünk lehetővé a felhasználói 
+egyéb funkciókhoz.
+A felhasználó hozzáférhet az összes alapvető funkcióhoz, további jogosultságokkal azonban nem bír, kapcsolatfelvételre 
+emailben, vagy telefonon jogosult esetleges információhiány, vagy technikai probléma esetén.
+A tulajdonos adatokat küldhet és törölhet, valamint extra szolgáltatásokat kérvényezhet a továbbiakban, azonban a 
+szerkesztést és az üzemeltetést a jövőben kötendő szerződés felbontásáig cégünk végzi.
+
+## 4. Rendszerre vonatkozó megszorítások
+
+A rendszerre vonatkozó külső megszorítások: pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
+A külső megszorítások közé tartoznak a:
+- pályázat
+- törvények
+- rendeletek
+- szabványok és ajánlások
+- A számonkérésig megadott időnek és kritériumoknak meg kell felelni.
+A megadott időn belül el kell végezni a feladatokat, különben nem kapunk jegyet.
+- A programnak meg kell felelni az adott országban meghatározott törvényeknek.
+A játék nem használ igazi valutát, így nem minősül szerencsejátéknak. Ennek
+következtében kiskorúak is használhatják.
+- Lehetnek kifejezetten erre a célra meghatározott rendeletek aminek szintén meg kell felelni.
+Mivel Magyarországon készül a program így a magyar törvénykönyv pontjainak meg kell felelni.
+- Figyelembe kell venni, hogy a programot milyen eszközön fogják használni.
+Minden eszköznek meg kell felelni a szabványosításnak.
+- Az összesnek együtt meg kell felelni, hogy létrejöhessen, és használható legyen a program.
+Ha már az egyik nem teljesül, vagy a program nem megfelelő, úgy nem nem lehet használni.
+
 ## 5. Jelenlegi üzleti folyamatok modellje
 
 - A jelenlegi üzleti modellben a felhasználók a Magus szerepjáték karakterlapjait a kezdés előtt írják meg.
