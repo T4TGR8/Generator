@@ -1,0 +1,62 @@
+## 2. Vágyálomrendszer
+
+A projekt célja egy olyan applikáció alapjainak lerakása, ami megkönnyítheti a hétvégi asztali 
+játékra való felkészülést és részvételt, a hosszadalmas felkészülési procedúrát lerövidítve 
+a munkával, családdal terhelt sorstársainknak elérhetővé teszi a szórakozás ezen formáját.
+Az alapvető adatok megadása után elkészíti a karakterlapot, valamint egyéb hasznos funkciókkal 
+segíti a kalandmesterek munkáját. Ideális lenne, ha letölthető és online is használható lenne a 
+program és később akár mobiltelefonos környezetbe is átültetnénk. Regisztáció szükséges lenne, 
+így egy programról akár több személy is igénybe tudná venni a szolgáltatást egymástól elszeparáltan.
+A kockák/harcok szimulálására egy kocka/harc generátort is létre lehetne hozni a későbbiekben, 
+jelen kereteinktől elkülönülve. Bár talán hihetetlennek tűnik és nyilván nem tömegigények kielégítése 
+a cél, de sok jó embernek lenne ez hasznos segédlet.
+
+## 3. A rendszerre vonatkozó pályázatok, törvények, rendeletek, szabványok és ajánlások felsorolása
+
+- 2016. évi XCIII. törvény a szerzői jogok és a szerzői joghoz kapcsolódó jogok közös kezeléséről
+- A pályázatban leírt időnek és kriteriumoknak meg kell felelni. Átadási határidő: 2021.05.08.
+- Az alkalmazás nem használ fizetőeszközt ezért kiskorúak is használhatják.
+- A magyar törvénykönyv pontajainak meg kell felelni.
+- Számítogépes szabványoknak meg kell felelnie, későbiekkben esetlegesen webbőngésző szabványainak is.
+
+## 4. Jelenlegi üzleti folyamatok modellje
+
+- Jelenleg a Magus szerepjáték karakterlapjait a kezdés előtt jelentős ideig kell írni egy élvezetes élményért.
+- Az játékosok saját kezüleg írják meg a lapokat.
+- Jelenleg gyors megoldásra nincs lehetősége a játékosoknak.
+- Kezdő játékosoknak nehezen feldolgozható, akár ijesztő mennyiségű a megadandó adat.
+
+## 5. Igényelt üzleti folyamatok modellje
+
+- Egy szoftver fejlesztése szórakoztatás céljából.
+- Az ügyfél a szoftver segítségével egy életkor, faj, szint és cast megadásával egy karaktert generál magának,
+  amit egy szerepjátékban tud használni.
+- A generált karaktereknek reálisnak kell lenniük.
+- Karakterek eltárolása, ha a játék valamilyen okból megszakadna, akkor könnyen folytatható legyen.
+- Karakter bizonyos adatainak változtatása.
+- Használati útmutatót mellékelünk a szoftver használatáról.
+
+## 6. Követelmény lista
+### I) Funkcionális követelmények
+Regisztráció lehetősége, több felhasználó kezeléséhez.
+2 féle külön generálás lehetősége a generálásra a rendelkezésre álló idő függvényében.
+Külön ablakok elkészítése valamennyi opcionális lehetőséghez a hozzá tartozó adatokkal, listákkal
+átlátható, könnyen kezelhető formában.
+A generálást követően a lapokon szereplő adatok integrálása egy nagyobb rendszerbe, melyből a 
+későbbiek során egy teljeskörű szolgáltatás állhat össze.
+	
+### II) Nem funkcionális követelmények
+Felhasználóbarát, ergonomikus elrendezés és kinézet.
+Gyors működés.
+Biztonságos működés: jelszavak tárolása, funkciókhoz való hozzáférés.
+		
+## 8. Fogalomszótár
+
+- Bug: fejlesztési hiba, ami miatt a program egy nem a várt eredményt ad. 
+- Main menu: a fő menü, amely indulásakor jelenik meg.
+- Online: interneten elérhető, azzal folyamatban kapcsolatban lévő.
+- Platform: adott programhoz szükséges hardver- és/vagy a szoftverkörnyezet.
+- Karakterlap: a játék szereplőihez készített, őket bemutató és jellemző leírás.
+- Backend: az ahonnan az alkalmazást el lehet érni, rendszer alsóbb, a tényleges feldolgozást végző rétege. 
+- Frontend: egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása a felhasználónak, illetve a felhasználó által bevitt adatok fogadása.
+- Web-service: különbözõ programnyelveken írt és különböző platformokon futó szoftveralkalmazások interneten keresztül történő adatcseréjére használt webszolgáltatások.
