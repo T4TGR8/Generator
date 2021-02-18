@@ -1,31 +1,31 @@
-##5. Jelenlegi üzleti folyamatok modellje
+## 5. Jelenlegi üzleti folyamatok modellje
 
 	- A jelenlegi üzleti modellben a felhasználók a Magus szerepjáték karakterlapjait a kezdés előtt írják meg.
 	- Ez jelentős ideig is eltarthat. A jelenben gyors megoldás nem érhető el.
 	- A kezdő játékosok esetleg nem tudják pontosan, hogy a sok megadható információ közül mi mire jó, vagy hogyan kéne megadni, ez akár el is fordíthat a játéktól érdeklődőket akiknek még nincs tapasztalatuk hasonló játékokban. 
 	- Ezt kellene elektronikusan megoldani, hogy a program arányában kevés adatból le tudjon generálni egy karaktert, ami felfrissítheti a már jártas játékosok élményeit, vagy megoldhatóvá teszi új játékosoknak a könnyedebb beszállást a Magus világába.
 
-##6. Igényelt üzleti folyamatok modellje
+## 6. Igényelt üzleti folyamatok modellje
 
 	 A szerepjátékok nyomonkövetése, adminiszrációja olykor nehéz feladat lehet. Ezt szeretnénk könnyebbé tenni a szoftverünkkel,
 	amely lehetővé teszi karakterek gyors és egyszerű generálását, tárolását és nyomonkövetését.
-	###Célunk:
+	### Célunk:
 	    - egy átlátható szofvter készítése
 	    - karakterek gyors és egyszerű elkészítése a felhasználó számára
 	    - karakterek tulajdonságainak könnyű átláthatóságának megteremtése
 
-	###Előnyök:
+	### Előnyök:
 	     - átláthatóság
 	     - gyorsaság
 	     - követhetőség
 	     - új játékosok számára könnyen érthető
 
-	###Képességek:
+	### Képességek:
 	    - Karakter generálás, akár kevés adatből
 	    - Karakter tárolás
 	    - Karakter bizonyos adatainak változtatása.
 
-##11. Forgatókönyv
+## 11. Forgatókönyv
 
 	- A felhasználó bármilyen operációs rendszeren keresztül tudja majd használni a szoftvert.
 	- Regisztráció nem szükséges hozzá, csak egy felhasználó által létrehozott név, hogy a játék el tudja tárolni a karaktert.
@@ -35,16 +35,16 @@
 	- A generált karaktert ezek után használható a generátoron kívül egy szerepjátékban használhatjuk.
 	- A későbbiekben van lehetőség a karakter bizonyos adatainak módosítására.
 
-##12. Funkció - követelmény megfeleltetés
-	###Funkcionális követelmények megfeleltetése:
+## 12. Funkció - követelmény megfeleltetés
+	### Funkcionális követelmények megfeleltetése:
 		- A főoldalon szeretnék látni egy rövid leírást arról hogy milyen adatok kellenek a generáláshoz.
 		- Szeretnék az adatoknak külön beviteli felületet.
 		- Szeretnék tudni ezekből legenerálni egy karakterlapot.
 		- Felhasználóként szeretném tudni a már létrehozott karaktereim megtekinteni.
-	###Nem funkcionális követelmények megfeleltetése:
+	### Nem funkcionális követelmények megfeleltetése:
 		- Felhasználóbarát, ergonomikus elrendezés és kinézet, és gyors müködés.
 
-##13. Fogalomszótár
+## 13. Fogalomszótár
 
 	- Bug: fejlesztési hiba, ami miatt a program egy nem a várt eredményt ad. 
 	- Main menu: a fő menü, amely indulásakor jelenik meg.
