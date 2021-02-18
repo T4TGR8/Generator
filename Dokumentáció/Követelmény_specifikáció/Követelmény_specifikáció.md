@@ -13,7 +13,7 @@ a cél, de sok jó embernek lenne ez hasznos segédlet.
 
 ## 3. A rendszerre vonatkozó pályázatok, törvények, rendeletek, szabványok és ajánlások felsorolása
 
-- 2016. évi XCIII. törvény a szerzői jogok és a szerzői joghoz kapcsolódó jogok közös kezeléséről
+- 2016 évi XCIII. törvény a szerzői jogok és a szerzői joghoz kapcsolódó jogok közös kezeléséről
 - A pályázatban leírt időnek és kriteriumoknak meg kell felelni. Átadási határidő: 2021.05.08.
 - Az alkalmazás nem használ fizetőeszközt ezért kiskorúak is használhatják.
 - A magyar törvénykönyv pontajainak meg kell felelni.
