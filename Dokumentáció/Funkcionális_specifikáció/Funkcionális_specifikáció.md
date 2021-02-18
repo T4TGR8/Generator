@@ -10,20 +10,20 @@
 	 A szerepjátékok nyomonkövetése, adminiszrációja olykor nehéz feladat lehet. Ezt szeretnénk könnyebbé tenni a szoftverünkkel,
 	amely lehetővé teszi karakterek gyors és egyszerű generálását, tárolását és nyomonkövetését.
 	### Célunk:
-	    - egy átlátható szofvter készítése
-	    - karakterek gyors és egyszerű elkészítése a felhasználó számára
-	    - karakterek tulajdonságainak könnyű átláthatóságának megteremtése
+	- egy átlátható szofvter készítése
+	- karakterek gyors és egyszerű elkészítése a felhasználó számára
+	- karakterek tulajdonságainak könnyű átláthatóságának megteremtése
 
 	### Előnyök:
-	     - átláthatóság
-	     - gyorsaság
-	     - követhetőség
-	     - új játékosok számára könnyen érthető
+	- átláthatóság
+	- gyorsaság
+	- követhetőség
+	- új játékosok számára könnyen érthető
 
 	### Képességek:
-	    - Karakter generálás, akár kevés adatből
-	    - Karakter tárolás
-	    - Karakter bizonyos adatainak változtatása.
+	- Karakter generálás, akár kevés adatből
+	- Karakter tárolás
+	- Karakter bizonyos adatainak változtatása.
 
 ## 11. Forgatókönyv
 
@@ -37,12 +37,12 @@
 
 ## 12. Funkció - követelmény megfeleltetés
 	### Funkcionális követelmények megfeleltetése:
-		- A főoldalon szeretnék látni egy rövid leírást arról hogy milyen adatok kellenek a generáláshoz.
-		- Szeretnék az adatoknak külön beviteli felületet.
-		- Szeretnék tudni ezekből legenerálni egy karakterlapot.
-		- Felhasználóként szeretném tudni a már létrehozott karaktereim megtekinteni.
+	- A főoldalon szeretnék látni egy rövid leírást arról hogy milyen adatok kellenek a generáláshoz.
+	- Szeretnék az adatoknak külön beviteli felületet.
+	- Szeretnék tudni ezekből legenerálni egy karakterlapot.
+	- Felhasználóként szeretném tudni a már létrehozott karaktereim megtekinteni.
 	### Nem funkcionális követelmények megfeleltetése:
-		- Felhasználóbarát, ergonomikus elrendezés és kinézet, és gyors müködés.
+	- Felhasználóbarát, ergonomikus elrendezés és kinézet, és gyors müködés.
 
 ## 13. Fogalomszótár
 
