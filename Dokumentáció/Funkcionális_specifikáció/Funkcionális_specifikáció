@@ -1,1 +1,29 @@
 start
+
+
+6. Igényelt üzleti folyamatok modellje
+
+	 A szerepjátékok nyomonkövetése, adminiszrációja olykor nehéz feladat lehet. Ezt szeretnénk könnyebbé tenni a szoftverünkkel,
+	amely lehetővé teszi karakterek gyors és egyszerű generálását, tárolását és nyomonkövetését.
+	Célunk: - egy átlátható szofvter készítése
+		- karakterek gyors és egyszerű elkészítése a felhasználó számára
+		- karakterek tulajdonságainak könnyű átláthatóságának megteremtése
+
+	Előnyök: - átláthatóság
+		 - gyorsaság
+		 - követhetőség
+		 - új játékosok számára könnyen érthető
+
+	Képességek: - Karakter generálás, akár kevés adatből
+		    - Karakter tárolás
+		    - Karakter bizonyos adatainak változtatása.
+
+11. Forgatókönyv
+
+	- A felhasználó bármilyen operációs rendszeren keresztül tudja majd használni a szoftvert.
+	- Regisztráció nem szükséges hozzá, csak egy felhasználó által létrehozott név, hogy a játék el tudja tárolni a karaktert.
+	- A karakter elkészítéséhez elegendő az életkor, faj, cast és szint megadása.
+	- A megadott adatok alapján generálhatjuk a karaktert.
+	- Gombok segítségével menthetjük vagy újragenerálhatjuk.
+	- A generált karaktert ezek után használható a generátoron kívül egy szerepjátékban használhatjuk.
+	- A későbbiekben van lehetőség a karakter bizonyos adatainak módosítására.
