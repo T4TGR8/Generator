@@ -1,6 +1,3 @@
-start
-
-
 3. A rendszerre vonatkozó pályázatok, törvények, rendeletek, szabványok és ajánlások felsorolása
 
 	- 2016. évi XCIII. törvény a szerzői jogok és a szerzői joghoz kapcsolódó jogok közös kezeléséről
@@ -9,6 +6,12 @@ start
 	- A magyar törvénykönyv pontajainak meg kell felelni.
 	- Számítogépes szabványoknak meg kell felelnie, későbiekkben esetlegesen webbőngésző szabványainak is.
 
+4. Jelenlegi üzleti folyamatok modellje
+
+	- Jelenleg a Magus szerepjáték karakterlapjait a kezdés előtt jelentős ideig kell írni egy élvezetes élményért.
+	- Az játékosok saját kezüleg írják meg a lapokat.
+	- Jelenleg gyors megoldásra nincs lehetősége a játékosoknak.
+	- Kezdő játékosoknak nehezen feldolgozható, akár ijesztő mennyiségű a megadandó adat.
 
 5. Igényelt üzleti folyamatok modellje
 
@@ -19,3 +22,14 @@ start
 	- Karakterek eltárolása, ha a játék valamilyen okból megszakadna, akkor könnyen folytatható legyen.
 	- Karakter bizonyos adatainak változtatása.
 	- Használati útmutatót mellékelünk a szoftver használatáról.
+
+8. Fogalomszótár
+
+	- Bug: fejlesztési hiba, ami miatt a program egy nem a várt eredményt ad. 
+	- Main menu: a fő menü, amely indulásakor jelenik meg.
+	- Online: interneten elérhető, azzal folyamatban kapcsolatban lévő.
+	- Platform: adott programhoz szükséges hardver- és/vagy a szoftverkörnyezet.
+	- Karakterlap: a játék szereplőihez készített, őket bemutató és jellemző leírás.
+	- Backend: az ahonnan az alkalmazást el lehet érni, rendszer alsóbb, a tényleges feldolgozást végző rétege. 
+	- Frontend: egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása a felhasználónak, illetve a felhasználó által bevitt adatok fogadása.
+	- Web-service: különbözõ programnyelveken írt és különböző platformokon futó szoftveralkalmazások interneten keresztül történő adatcseréjére használt webszolgáltatások.
