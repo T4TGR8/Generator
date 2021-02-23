@@ -79,6 +79,22 @@ Szeretnénk elkerülni a hosszadalmas karakter adatok megadását. -> Program in
 Egy gombra kattintva a program generál egy karaktert -> Megnézhatjük a karaktert -> Ha elnyeri tetszésünket elmenthetjük egy gombra kattintva ->
 Ha nem, akkor egy másik gombra kattintva újat generálhatunk -> Ezek után az elmentett karakterünket használhatjuk és változtathatjuk szükség esetén
 
+## 7. Követelménylista
+
+**Bejelentkező ablak:** Itt nyílik lehetőségünk a szerep kiválasztására, vagy új szerep létrehozására.\
+Felhasználónév és jelszó megadásával juthatunk beljebb.
+**Regisztráló ablak:** Új szerep létrehozása esetén kerülünk ide a bejelentkező lapról. Felhasználónevünk 
+és jelszavunk meghatározásával létrehozásra kerül fiókunk.\
+**Fő ablak:** Bejelentkezést követően ide érkezünk, ahol kiválaszthatjuk az általunk elérni kívánt funkciót.\
+**Gyorsgeneráló ablak:** A fő lapról egy új egyenlőre üres lapra kerülünk, ahol egy felugró ablak jelenik meg,
+ide beírva a generálófüggvény számára nélkülözhetetlen alapadatokat a lapon megjelenik a kívánt eredmény.\
+**Manuális generáló ablak:** A fő lapról szintén egy üres lapra jutunk, ahol felugró segédlapok segítségével 
+egyenként adhatjuk meg a pontértékeket, melyek levonásra kerülnek egy felugró lapon tárolt maximális értékből.
+Az összes pont elosztását követően mentjük az oldalt és az eredményeket.
+Kockaszimulációs lap: A főlapból egy random kocka generáló oldalra jutunk, egyenlőre nincs konkrét háttér, 
+koncepció a vizuális megjelenítés körül.\
+**TODO:** További verziókban újabb lapokkal fog bővülni a dokumentáció!
+
 ## 8. Használati esetek
 
 #### Szereplők:
