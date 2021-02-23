@@ -91,6 +91,17 @@ nem bír, a felhasználók adatainak szerkesztésére semmilyen formában nem jo
 verziók főleg erre a topicra fognak fókuszálni, hogy lehetővé tegyék játékok online lebonyolítását
 és megszervezését.
 
+## 9. Megfeleltetés
+
+- Regisztráció felhasználók számára
+- Bejelentkezés felhasználók számára
+- Rövid idejű generálás felhasználóknak
+- Hosszú idejű generálás felhasználóknak
+- Felhasználók módisíthatják karaktereiket
+- Játék biztosítása a felhasználóknak
+- Egy magasabb szintű felhasználó, aki a játék lebonyolítását végzi
+- Opcionális lehetőségekhez külön ablak használata
+
 ## 11. Forgatókönyv
 
 - A felhasználó bármilyen operációs rendszeren keresztül tudja majd használni a szoftvert.
