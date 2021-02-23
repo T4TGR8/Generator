@@ -34,7 +34,6 @@ nevükön és azonosítóikon kívül.
 ## 6. Fizikai környezet
 - Ablakos illetve későbbiekben webes alkalmazás
 - Nincsenek megvásárolt komponenseink
-- 
 - Fejlesztői eszközök:
     - IntelliJ IDEA
     - Notepad++
