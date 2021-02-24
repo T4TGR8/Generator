@@ -40,10 +40,7 @@ a cél, de sok jó embernek lenne ez hasznos segédlet.
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
-- Jelenleg a Magus szerepjáték karakterlapjait a kezdés előtt jelentős ideig kell írni egy élvezetes élményért.
-- Az játékosok saját kezüleg írják meg a lapokat.
-- Jelenleg gyors megoldásra nincs lehetősége a játékosoknak.
-- Kezdő játékosoknak nehezen feldolgozható, akár ijesztő mennyiségű a megadandó adat.
+A játékosok leülnek a tábla köré -> Hosszas gondolkozás közepedte a játékosok papíron megírják saját kezüleg a karakterlapokat -> Akiknek ez a folyamat ismeretlen feladhatják, nem próbálkoznak tovább a játékkal -> A karakterlapok ellenőrzése a játékvezető által, meg kell győződjön róla, hogy senki sem adott meg rossz adatokat, szintén hosszadalmas -> A játék kezdődik
 
 ## 5. Igényelt üzleti folyamatok modellje
 
