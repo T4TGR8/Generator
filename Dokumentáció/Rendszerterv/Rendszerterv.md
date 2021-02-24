@@ -16,7 +16,7 @@ a szellemi szabadság manufaktúra üzemmé alakítása.
 
 ## 2. Projektterv
 
-Beosztás megbeszélés allatt
+Beosztás megbeszélés allatt  
 Csapattagok: Barna Bence, Dávid Gergely, Deák Ádám, Dévai Levente, Járomi Dávid
 
 ## 3. Üzleti folyamatok modellje
@@ -65,6 +65,6 @@ Kezdetleges rendszer telepítése a megrendelő által kívánt helyre és annak
 
 ### Tesztelendő funkciók
 #### Karakterlap generáció
-Képesnek kell lennie adatokat fogadni és átadni a generátornak.
-Képesnek kell lennie egy időben kiszolgálni több klienst is.
-Reális adatokat kell, hogy visszaadjon a generátor
+Képesnek kell lennie adatokat fogadni és átadni a generátornak.  
+Képesnek kell lennie egy időben kiszolgálni több klienst is.  
+Reális adatokat kell, hogy visszaadjon a generátor.  
