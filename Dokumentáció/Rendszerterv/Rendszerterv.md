@@ -14,6 +14,15 @@ való működés, mindössze a személyes kontaktok során felmerülő problém�
 piaci alapú felhasználás, bármilyen kereskedelmi tevékenység. Nem célja az interakciók automatizálása,
 a szellemi szabadság manufaktúra üzemmé alakítása.
 
+## 2. Projektterv
+
+Beosztás megbeszélés allatt
+Csapattagok: Barna Bence, Dávid Gergely, Deák Ádám, Dévai Levente, Járomi Dávid
+
+## 3. Üzleti folyamatok modellje
+
+A felhasználónak indításkor meg kell addnia az elvárt adatokat(faj, életkor, cast, szint). Ezután a program a megadott információkból gyorsan legenerál egy karakterlapot ami tartalmazza az összes játékhoz szükséges adatot, ezzel lerövidítve a játék előkészítéséhez szükséges időt. Ezzel a gyors megoldással könnyebb belépni a játékba kezdőként, vagy akár veteránként könnyebb új karaktereket kipróbálni, ezzel felfrissítve a játék élvezetét.
+
 ## 4. Követelmények
 
 ### Funkcionális követelmények:
@@ -38,3 +47,24 @@ nevükön és azonosítóikon kívül.
     - IntelliJ IDEA
     - Notepad++
     - MySQL Workbench
+
+## 11. Tesztterv
+
+A tesztelések célja a rendszer és komponensei funkcionalitásának
+teljes vizsgálata, ellenőrzése, a rendszer által megvalósított üzleti
+szolgáltatások verifikálása
+
+### Unit teszt:
+Ahol csak lehetséges, szükséges már a fejlesztési idő alatt is tesztelni, hogy a metódusok megfelelően működnek-e. Ezért a metódusok megfelelő működésének biztosítására mindegyikhez írni kell Unit teszteket, a minél nagyobb kódlefedettséget szem előtt tartva. A metódusok akkor vannak kész, ha a tesztesetek hiba nélkül lefutnak az egyes metódusokon
+
+### Alfa teszt:
+Fejlesztőcsapat teszteli a rendszert a felfedezett hibákat javítja, finomítja gyorsítja a rendszert szükség esetén
+
+### Beta teszt:
+Kezdetleges rendszer telepítése a megrendelő által kívánt helyre és annak tesztelése, problémák fellépése esetén jelezni azokat
+
+### Tesztelendő funkciók
+#### Karakterlap generáció
+Képesnek kell lennie adatokat fogadni és átadni a generátornak.
+Képesnek kell lennie egy időben kiszolgálni több klienst is.
+Reális adatokat kell, hogy visszaadjon a generátor
