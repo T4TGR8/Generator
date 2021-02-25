@@ -141,3 +141,20 @@ Kezdetleges rendszer telepítése a megrendelő által kívánt helyre és annak
 Képesnek kell lennie adatokat fogadni és átadni a generátornak.  
 Képesnek kell lennie egy időben kiszolgálni több klienst is.  
 Reális adatokat kell, hogy visszaadjon a generátor.  
+
+# 12. Telepítési terv
+
+Szükség van egy laptopra, vagy egy asztali számítógépre amin fut az adott alkalmazás.
+Mivel ez egy asztali alkalmazás ezért a sorrend a következő:
+- Futtatás
+- Telepítés
+- Regisztráció
+- Belépés
+Belépés után már használható is a program.
+Online verzió esetén a telepítés és a futtatás természetesen nem szükséges.
+
+# 13. Karbantartási terv
+
+A szoftver a jövõben (az iskolai projekt keretein belül) nem igényel nagy karbantartásokat, a szükséges karbantartások az alábbi egységekbõl állnak:
+- Igény esetén új funkciók implementálása.
+- Igény esetén új műveletek implementálása.
