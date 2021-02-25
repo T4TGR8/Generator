@@ -84,6 +84,43 @@ Főablak
 # 7. Absztrakt domain modell
 A program mûködése során a felhasználó kétféle szerepkörben szerepelhet: kalandmester vagy felhasználó. Ennek megfelelõen kap az alany funkciókat, amelyek a szerepkörökhöz kizárólagosan vagy nem kizárólagosan kapcsolódnak: azaz vagy csak õ fér hozzá, vagy mindketten a saját oldalukról. Az általános alany szerepkörét a bejelentkezés után a Jogosultság vizsgálata dönti el. A kaland kezelését szabályozó funkciók kizárólag a kalandmester számára elérhetõek. A további eszközöket mindkét szint használhatja.
 
+# 10. Implementációs terv
+
+Bejelentkező ablak (ID ablak1):
+- Text mező - Felhasználói név mező: Ide kerül beírásra a választott felhasználói név.
+- Password mező - Felhasználói jelszó mező: Ide kerül beírásra a választott jelszó.
+- Belépés gomb: A gomb lenyomásával aktiváljuk a hozzá tartozó belépési függvényt, mely a text és password mezőkbe beírt adatok alapján lépteti be fiókjába a felhasználót, amennyiben ezek megegyeznek az adatbázisban tároltakkal.
+- Regisztrációs gomb: A gomb lenyomásával egy új felületre jutunk (Regisztrációs ablak).
+
+Regisztrációs ablak (ID ablak2): 
+- Text mező (lsd. ablak1)
+- Password mező (lsd. ablak1)
+- Password megerősítő mező: A felhasználó ezen mezőben újfent begépeli jelszavát, egy a mezőhöz tartozó függvény ezt összehasonlítja a password mezővel, amennyiben megyeznek egy zöld pipa jelenik meg a mező mellett és elérhetővé válik a Regisztrációs gomb.
+- Regisztrációs gomb: a gomb lenyomásával meghívjuk a hozzátartozó függvényt, mely a felhasználóra vonatkozó adatokat (felhasználói név és jelszó) eltárolja az adatbázisban és lehetővé teszi a belépést.
+
+Főablak (ID ablak3): 
+- Karaktergeneráló Choice Box - legördülő menü: A felhasználó kiválaszthatja a dobozban rendelkezésreálló 2 karaktergeneráló opció közül milyen módon kivánja azt létrehozni. A választás meghozatalát követően egy függvény az ahhoz tartozó új ablakhoz vezet.
+- Karakterválasztó List View: amikor egy új karakter legenerálásra kerül és a felhasználó elmenti az adatbázisba a hozzá tartozó függvény ebbe a listába is eltárolja a karaktert (neve - kasztja - szintje). A listában való kiválasztást követően válik elérhetővé az adott karakterre vonatkozó list view.
+- Konkrét karakterre vonatkozó List View: Miután az előző pontban kiválasztásra került a karakter itt válnak hozzáférhetővé a specifikusan rá vonatkozó lehetőségek.
+    1. Megtekintés: Betölti a karakterlapot, eloszthatjuk a tapasztalati pontokat.
+    2. Szerkesztés: Betölti a karakterlapot, a manuális generálás szabályainak megfelelően azt átalakíthatjuk. Az első megszerzett tapasztalati pontok terminálják ezt a lehetőséget.
+    3. Törlés
+- Kockadobó szimulátor gomb: lenyomásakor a hozzá tartozó függvény megjeleníti a kockadobó ablakot.
+
+Gyorsgeneráló ablak (ID ablak4): 
+- Karakternév Text Box: a felhasználó ide irja be a karaktere nevét.
+- Karakter faj Choice Box: a felhasználó a játszható fajok közül választ egyet.
+- Karakter kaszt Choice Box: a felhasználó a játszható kasztok közül választ egyet.
+- Karakter szint Text Field: a felhasználó kiválasztja a kívánt tapasztalati szintet.
+- Karaktergeneráló Button: a fenti adatokból egy függvény legenerálja a többi értékeket véletlen szerűen (bizonyos intervallumon belül) és visszaadja a kész karakterlapot.
+- Mentés Button: amennyiben a felhasználó elégedett a gomb lenyomásával eltárolja a karakterlapot az adatbázisban és véglegesíti azt.
+
+Manuális karaktergeneráló ablak (ID ablak5): 
+TODO 
+
+Kockadobás szimulátor ablak (ID ablak6):
+- Kockadobó aréna PictureView: Ezen grafikus felületen egy kocka lesz megjelenítve, melyet ha az egér balgombjával rákattintunk "eldobhatjuk".
+
 ## 11. Tesztterv
 
 A tesztelések célja a rendszer és komponensei funkcionalitásának
