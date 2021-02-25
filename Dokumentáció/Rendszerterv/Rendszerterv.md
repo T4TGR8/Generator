@@ -40,6 +40,39 @@ nevükön és azonosítóikon kívül.
 ### Törvényi előírások, szabványok:
 - GDPR-nek való megfelelés
 
+# 5. Funkcionális terv
+
+**Rendszer szereplők:**
+- Felhasználó
+- Kalandmester
+
+**Rendszer használati esetek és lefutásaik:**
+Felhasználó:
+- Bejelentezés
+- Regisztráció
+- Karakter készítése
+- Karakter törlése
+- Kockadobás
+
+Kalandmester: 
+- Bejelentkezés
+- Regisztráció
+- Karakter megtekintése
+- Csapat készítése
+- Harc generálása
+
+Menü hierarchiák:
+Bejelentkezés
+1. Bejelentkezés 
+2. Regisztráció
+
+Főablak
+1. Kijelentkezés
+2. Karakter generálása
+3. Kockadobó szimulátor
+4. Csapatszoba
+5. Csoportszoba
+
 ## 6. Fizikai környezet
 - Ablakos illetve későbbiekben webes alkalmazás
 - Nincsenek megvásárolt komponenseink
