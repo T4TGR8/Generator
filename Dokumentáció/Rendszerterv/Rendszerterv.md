@@ -81,6 +81,9 @@ Főablak
     - Notepad++
     - MySQL Workbench
 
+# 7. Absztrakt domain modell
+A program mûködése során a felhasználó kétféle szerepkörben szerepelhet: kalandmester vagy felhasználó. Ennek megfelelõen kap az alany funkciókat, amelyek a szerepkörökhöz kizárólagosan vagy nem kizárólagosan kapcsolódnak: azaz vagy csak õ fér hozzá, vagy mindketten a saját oldalukról. Az általános alany szerepkörét a bejelentkezés után a Jogosultság vizsgálata dönti el. A kaland kezelését szabályozó funkciók kizárólag a kalandmester számára elérhetõek. A további eszközöket mindkét szint használhatja.
+
 ## 11. Tesztterv
 
 A tesztelések célja a rendszer és komponensei funkcionalitásának
