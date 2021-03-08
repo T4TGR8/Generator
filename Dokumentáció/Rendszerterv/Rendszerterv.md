@@ -16,9 +16,9 @@ a szellemi szabadság manufaktúra üzemmé alakítása.
 
 ## 2. Projektterv
 
-Login rendszer: Barna Bence, Dévai Levente
-Generáló fejlesztés: Dávid Gergely, Deák Ádám
-Manager: Járomi Dávid
+Login rendszer: Barna Bence, Dévai Levente  
+Generáló fejlesztés: Dávid Gergely, Deák Ádám  
+Manager: Járomi Dávid  
 Csapattagok: Barna Bence, Dávid Gergely, Deák Ádám, Dévai Levente, Járomi Dávid
 
 ## 3. Üzleti folyamatok modellje
