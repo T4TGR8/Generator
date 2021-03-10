@@ -1,0 +1,12 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="magus.controllers.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+
+    <Label fx:id="label_pelda" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Button fx:id="button_1" text="gomb" GridPane.columnIndex="0" GridPane.rowIndex="0"
+            onAction="#gombpush"/>
+</GridPane>
