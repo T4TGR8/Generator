@@ -9,5 +9,4 @@
     <Label fx:id="label_pelda" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
     <Button fx:id="button_1" text="gomb" GridPane.columnIndex="0" GridPane.rowIndex="0"
             onAction="#gombpush"/>
-    
 </GridPane>

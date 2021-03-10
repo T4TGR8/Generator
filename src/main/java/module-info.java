@@ -4,4 +4,5 @@ module Generator {
 
     opens magus;
     opens magus.controllers;
+    opens magus.model;
 }
