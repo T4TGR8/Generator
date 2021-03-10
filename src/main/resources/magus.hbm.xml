@@ -6,4 +6,6 @@
         <property name="name" type="java.lang.String" column="name"/>
         <property name="password" type="java.lang.String" column="password"/>
     </class>
+
+
 </hibernate-mapping>
