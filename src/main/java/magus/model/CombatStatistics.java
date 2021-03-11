@@ -8,6 +8,8 @@ public class CombatStatistics {
     int aimingPoints;
     int combatModifierPerLevel;
 
+    Character character;
+
     public int getId() {
         return id;
     }
@@ -54,6 +56,14 @@ public class CombatStatistics {
 
     public void setCombatModifierPerLevel(int combatModifierPerLevel) {
         this.combatModifierPerLevel = combatModifierPerLevel;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
     }
 
     public CombatStatistics() {

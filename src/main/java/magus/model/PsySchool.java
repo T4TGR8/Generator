@@ -1,5 +1,7 @@
 package magus.model;
 
 public enum PsySchool {
-    PYAR
+    PYAR,
+    SLAN,
+    KYR
 }

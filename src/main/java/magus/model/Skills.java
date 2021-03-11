@@ -6,6 +6,8 @@ public class Skills {
     int skillPointsPerLevel;
     int skillPoints;
 
+    Character character;
+
     public int getId() {
         return id;
     }
@@ -36,6 +38,14 @@ public class Skills {
 
     public void setSkillPoints(int skillPoints) {
         this.skillPoints = skillPoints;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
     }
 
     public Skills() {

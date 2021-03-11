@@ -12,6 +12,7 @@ public class Attributes {
     int will;
     int astral;
     int perception;
+    Character character;
 
     public int getId() {
         return id;
@@ -100,6 +101,15 @@ public class Attributes {
     public void setPerception(int perception) {
         this.perception = perception;
     }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
 
     public Attributes() {
     }

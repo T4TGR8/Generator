@@ -5,6 +5,7 @@ public class Character {
     String name;
     Caste caste;
     Race race;
+    int age;
     Personality personality;
     Religion religion;
     Symbol symbol;
@@ -12,6 +13,13 @@ public class Character {
     String school;
     int level;
     int experience_point;
+
+    User user;
+    Attributes attributes;
+    Skills skills;
+    Psy psy;
+    CombatStatistics statistics;
+    HealthAndPainRes healthAndPainRes;
 
     public int getId() {
         return id;
@@ -43,6 +51,14 @@ public class Character {
 
     public void setRace(Race race) {
         this.race = race;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public Personality getPersonality() {
@@ -99,6 +115,54 @@ public class Character {
 
     public void setExperience_point(int experience_point) {
         this.experience_point = experience_point;
+    }
+
+    public Attributes getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(Attributes attributes) {
+        this.attributes = attributes;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Skills getSkills() {
+        return skills;
+    }
+
+    public void setSkills(Skills skills) {
+        this.skills = skills;
+    }
+
+    public Psy getPsy() {
+        return psy;
+    }
+
+    public void setPsy(Psy psy) {
+        this.psy = psy;
+    }
+
+    public CombatStatistics getStatistics() {
+        return statistics;
+    }
+
+    public void setStatistics(CombatStatistics statistics) {
+        this.statistics = statistics;
+    }
+
+    public HealthAndPainRes getHealthAndPainRes() {
+        return healthAndPainRes;
+    }
+
+    public void setHealthAndPainRes(HealthAndPainRes healthAndPainRes) {
+        this.healthAndPainRes = healthAndPainRes;
     }
 
     public Character() {

@@ -9,6 +9,8 @@ public class Psy {
     int astralMagicShield;
     int mentalMagicShield;
 
+    Character character;
+
     public int getId() {
         return id;
     }
@@ -63,6 +65,14 @@ public class Psy {
 
     public void setMentalMagicShield(int mentalMagicShield) {
         this.mentalMagicShield = mentalMagicShield;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
     }
 
     public Psy() {

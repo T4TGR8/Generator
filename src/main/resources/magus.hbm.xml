@@ -7,6 +7,54 @@
         <property name="password" type="java.lang.String" column="password"/>
     </class>
 
+
+
+    <class name="magus.model.Character" table="characters">
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name" type="java.lang.String" column="name"/>
+        <property name="caste" column="caste">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">magus.model.Caste</param>
+            </type>
+        </property>
+        <property name="race" column="race">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">magus.model.Race</param>
+            </type>
+        </property>
+        <property name="age" type="java.lang.Integer" column="age"/>
+        <property name="personality" column="personality">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">magus.model.Personality</param>
+            </type>
+        </property>
+        <property name="birthplace" type="java.lang.String" column="birthplace"/>
+        <property name="school" type="java.lang.String" column="school"/>
+        <property name="religion" column="religion">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">magus.model.Religion</param>
+            </type>
+        </property>
+        <property name="symbol" column="symbol">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">magus.model.Symbol</param>
+            </type>
+        </property>
+        <property name="level" type="java.lang.Integer" column="level"/>
+        <property name="experience_point" type="java.lang.Integer" column="experiencePoints"/>
+
+        <one-to-one name="attributes" class="magus.model.Attributes" cascade="all"/>
+        <one-to-one name="statistics" class="magus.model.CombatStatistics" cascade="all"/>
+        <one-to-one name="healthAndPainRes" class="magus.model.HealthAndPainRes" cascade="all"/>
+        <one-to-one name="psy" class="magus.model.Psy" cascade="all"/>
+        <one-to-one name="skills" class="magus.model.Skills" cascade="all"/>
+
+    </class>
+
+
+
    <class name="magus.model.Skills" table="skills">
        <id name="id" type="java.lang.Integer" column="id">
            <generator class="increment"></generator>
@@ -14,6 +62,79 @@
        <property name="baseSkillPoints" type="java.lang.Integer" column="baseSkillPoints"/>
        <property name="skillPointsPerLevel" type="java.lang.Integer" column="skillPointsPerLevel"/>
        <property name="skillPoints" type="java.lang.Integer" column="skillPoints"/>
+
+       <one-to-one name="character" class="magus.model.Character" constrained="true" />
    </class>
+
+
+
+    <class name="magus.model.Attributes" table="attributes">
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="strength" type="java.lang.Integer" column="strength"/>
+        <property name="quickness" type="java.lang.Integer" column="quickness"/>
+        <property name="dexterity" type="java.lang.Integer" column="dexterity"/>
+        <property name="endurance" type="java.lang.Integer" column="endurance"/>
+        <property name="health" type="java.lang.Integer" column="health"/>
+        <property name="beauty" type="java.lang.Integer" column="beauty"/>
+        <property name="will" type="java.lang.Integer" column="will"/>
+        <property name="intelligence" type="java.lang.Integer" column="intelligence"/>
+        <property name="astral" type="java.lang.Integer" column="astral"/>
+        <property name="perception" type="java.lang.Integer" column="perception"/>
+
+        <one-to-one name="character" class="magus.model.Character" constrained="true" />
+
+    </class>
+
+
+
+    <class name="magus.model.CombatStatistics" table="combatStatistics">
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="initiativePoints" type="java.lang.Integer" column="initiativePoints"/>
+        <property name="attackPoints" type="java.lang.Integer" column="attackPoints"/>
+        <property name="defensePoints" type="java.lang.Integer" column="defensePoints"/>
+        <property name="aimingPoints" type="java.lang.Integer" column="aimingPoints"/>
+        <property name="combatModifierPerLevel" type="java.lang.Integer" column="combatModifierPerLevel"/>
+
+        <one-to-one name="character" class="magus.model.Character" constrained="true" />
+    </class>
+
+
+
+    <class name="magus.model.HealthAndPainRes" table="healthAndPainRes">
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="baseHealthPoints" type="java.lang.Integer" column="baseHealthPoints"/>
+        <property name="maxHealthPoints" type="java.lang.Integer" column="maxHealthPoints"/>
+        <property name="basePainResistancePoints" type="java.lang.Integer" column="basePainResistancePoints"/>
+        <property name="painResistancePointsPerLevel" type="java.lang.Integer" column="painResistancePointsPerLevel"/>
+        <property name="maxPainResistancePoints" type="java.lang.Integer" column="maxPainResistancePoints"/>
+
+        <one-to-one name="character" class="magus.model.Character" constrained="true" />
+    </class>
+
+
+
+    <class name="magus.model.Psy" table="psy">
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="psySchool" column="psySchool">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">magus.model.PsySchool</param>
+            </type>
+        </property>
+        <property name="usageGrade" type="java.lang.Integer" column="usageGrade"/>
+        <property name="usageLevel" type="java.lang.Integer" column="usageLevel"/>
+        <property name="psyPoints" type="java.lang.Integer" column="psyPoints"/>
+        <property name="mentalMagicShield" type="java.lang.Integer" column="mentalMagisShield"/>
+        <property name="astralMagicShield" type="java.lang.Integer" column="astralMagicShield"/>
+
+        <one-to-one name="character" class="magus.model.Character" constrained="true" />
+    </class>
 
 </hibernate-mapping>

@@ -8,6 +8,8 @@ public class HealthAndPainRes {
     int maxPainResistancePoints;
     int painResistancePointsPerLevel;
 
+    Character character;
+
     public int getId() {
         return id;
     }
@@ -54,6 +56,14 @@ public class HealthAndPainRes {
 
     public void setPainResistancePointsPerLevel(int painResistancePointsPerLevel) {
         this.painResistancePointsPerLevel = painResistancePointsPerLevel;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
     }
 
     public HealthAndPainRes() {
