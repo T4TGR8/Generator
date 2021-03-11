@@ -7,5 +7,13 @@
         <property name="password" type="java.lang.String" column="password"/>
     </class>
 
+   <class name="magus.model.Skills" table="skills">
+       <id name="id" type="java.lang.Integer" column="id">
+           <generator class="increment"></generator>
+       </id>
+       <property name="baseSkillPoints" type="java.lang.Integer" column="baseSkillPoints"/>
+       <property name="skillPointsPerLevel" type="java.lang.Integer" column="skillPointsPerLevel"/>
+       <property name="skillPoints" type="java.lang.Integer" column="skillPoints"/>
+   </class>
 
 </hibernate-mapping>
