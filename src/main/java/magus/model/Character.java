@@ -15,6 +15,7 @@ public class Character {
     int experience_point;
 
     User user;
+
     Attributes attributes;
     Skills skills;
     Psy psy;

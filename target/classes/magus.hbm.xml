@@ -1,17 +1,24 @@
 <hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
     <class name="magus.model.User" table="users">
-        <id name="id" type="java.lang.Integer" column="id">
+        <id name="id" type="java.lang.Integer" column="user_id">
             <generator class="increment"/>
         </id>
         <property name="name" type="java.lang.String" column="name"/>
         <property name="password" type="java.lang.String" column="password"/>
+
+        <set name="characters" inverse="true"
+             lazy="true" fetch="select" cascade="all">
+            <key column="user_id" not-null="true" />
+            <one-to-many class="magus.model.Character"/>
+        </set>
     </class>
 
 
 
     <class name="magus.model.Character" table="characters">
         <id name="id" type="java.lang.Integer" column="id">
-            <generator class="increment"></generator>
+            <generator class="increment"/>
         </id>
         <property name="name" type="java.lang.String" column="name"/>
         <property name="caste" column="caste">
@@ -45,19 +52,20 @@
         <property name="level" type="java.lang.Integer" column="level"/>
         <property name="experience_point" type="java.lang.Integer" column="experiencePoints"/>
 
+        <many-to-one name="user" class="magus.model.Character" column="user_id" not-null="true"/>
+
         <one-to-one name="attributes" class="magus.model.Attributes" cascade="all"/>
         <one-to-one name="statistics" class="magus.model.CombatStatistics" cascade="all"/>
         <one-to-one name="healthAndPainRes" class="magus.model.HealthAndPainRes" cascade="all"/>
         <one-to-one name="psy" class="magus.model.Psy" cascade="all"/>
         <one-to-one name="skills" class="magus.model.Skills" cascade="all"/>
-
     </class>
 
 
 
    <class name="magus.model.Skills" table="skills">
        <id name="id" type="java.lang.Integer" column="id">
-           <generator class="increment"></generator>
+           <generator class="increment"/>
        </id>
        <property name="baseSkillPoints" type="java.lang.Integer" column="baseSkillPoints"/>
        <property name="skillPointsPerLevel" type="java.lang.Integer" column="skillPointsPerLevel"/>
@@ -70,7 +78,7 @@
 
     <class name="magus.model.Attributes" table="attributes">
         <id name="id" type="java.lang.Integer" column="id">
-            <generator class="increment"></generator>
+            <generator class="increment"/>
         </id>
         <property name="strength" type="java.lang.Integer" column="strength"/>
         <property name="quickness" type="java.lang.Integer" column="quickness"/>
@@ -91,7 +99,7 @@
 
     <class name="magus.model.CombatStatistics" table="combatStatistics">
         <id name="id" type="java.lang.Integer" column="id">
-            <generator class="increment"></generator>
+            <generator class="increment"/>
         </id>
         <property name="initiativePoints" type="java.lang.Integer" column="initiativePoints"/>
         <property name="attackPoints" type="java.lang.Integer" column="attackPoints"/>
@@ -106,7 +114,7 @@
 
     <class name="magus.model.HealthAndPainRes" table="healthAndPainRes">
         <id name="id" type="java.lang.Integer" column="id">
-            <generator class="increment"></generator>
+            <generator class="increment"/>
         </id>
         <property name="baseHealthPoints" type="java.lang.Integer" column="baseHealthPoints"/>
         <property name="maxHealthPoints" type="java.lang.Integer" column="maxHealthPoints"/>
@@ -121,7 +129,7 @@
 
     <class name="magus.model.Psy" table="psy">
         <id name="id" type="java.lang.Integer" column="id">
-            <generator class="increment"></generator>
+            <generator class="increment"/>
         </id>
         <property name="psySchool" column="psySchool">
             <type name="org.hibernate.type.EnumType">

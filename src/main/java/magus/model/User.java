@@ -2,10 +2,14 @@ package magus.model;
 
 import magus.Encryption;
 
+import java.util.Set;
+
 public class User {
     private int id;
     private String name;
     private String password;
+
+    private Set<Character> characters;
 
     public int getId() {
         return id;
@@ -29,6 +33,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = Encryption.getMd5(password);
+    }
+
+    public Set<Character> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(Set<Character> characters) {
+        this.characters = characters;
     }
 
     public User() {

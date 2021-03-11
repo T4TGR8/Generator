@@ -3,9 +3,7 @@ package magus.model;
 import magus.dao.CharacterDAO;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class CharacterTest {
+public class CharacterDAOTest {
 
     CharacterDAO dao = new CharacterDAO();
 
@@ -44,4 +42,5 @@ public class CharacterTest {
 
         dao.createCharacter(c);
     }
+
 }
