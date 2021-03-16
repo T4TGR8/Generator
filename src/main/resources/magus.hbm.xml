@@ -12,29 +12,33 @@
             <key column="user_id" not-null="true" />
             <one-to-many class="magus.model.Character"/>
         </set>
+
     </class>
 
 
 
     <class name="magus.model.Character" table="characters">
-        <id name="id" type="java.lang.Integer" column="id">
+        <id name="id" type="java.lang.Integer" column="character_id">
             <generator class="increment"/>
         </id>
         <property name="name" type="java.lang.String" column="name"/>
         <property name="caste" column="caste">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">magus.model.Caste</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <property name="race" column="race">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">magus.model.Race</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <property name="age" type="java.lang.Integer" column="age"/>
         <property name="personality" column="personality">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">magus.model.Personality</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <property name="birthplace" type="java.lang.String" column="birthplace"/>
@@ -42,17 +46,19 @@
         <property name="religion" column="religion">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">magus.model.Religion</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <property name="symbol" column="symbol">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">magus.model.Symbol</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <property name="level" type="java.lang.Integer" column="level"/>
-        <property name="experience_point" type="java.lang.Integer" column="experiencePoints"/>
+        <property name="experiencePoint" type="java.lang.Integer" column="experiencePoints"/>
 
-        <many-to-one name="user" class="magus.model.Character" column="user_id" not-null="true"/>
+        <many-to-one name="user" class="magus.model.User" column="user_id" not-null="true"/>
 
         <one-to-one name="attributes" class="magus.model.Attributes" cascade="all"/>
         <one-to-one name="statistics" class="magus.model.CombatStatistics" cascade="all"/>
@@ -134,6 +140,7 @@
         <property name="psySchool" column="psySchool">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">magus.model.PsySchool</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <property name="usageGrade" type="java.lang.Integer" column="usageGrade"/>

@@ -12,7 +12,7 @@ public class Character {
     String birthplace;
     String school;
     int level;
-    int experience_point;
+    int experiencePoint;
 
     User user;
 
@@ -110,12 +110,12 @@ public class Character {
         this.level = level;
     }
 
-    public int getExperience_point() {
-        return experience_point;
+    public int getExperiencePoint() {
+        return experiencePoint;
     }
 
-    public void setExperience_point(int experience_point) {
-        this.experience_point = experience_point;
+    public void setExperiencePoint(int experience_point) {
+        this.experiencePoint = experience_point;
     }
 
     public Attributes getAttributes() {
