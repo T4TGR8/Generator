@@ -44,7 +44,7 @@ A játékosok leülnek a tábla köré -> Hosszas gondolkozás közepedte a ját
 
 ## 5. Igényelt üzleti folyamatok modellje
 
-Szeretnénk elkerülni a hosszadalmas karakter adatok megadását. -> Program indítása -> Alap adatok megadása(faj, életkor, cast, szint) ->
+Program indítása -> Alap adatok megadása(faj, életkor, cast, szint) ->
 Egy gombra kattintva a program generál egy karaktert -> Megnézhatjük a karaktert -> Ha elnyeri tetszésünket elmenthetjük egy gombra kattintva ->
 Ha nem, akkor egy másik gombra kattintva újat generálhatunk -> Ezek után az elmentett karakterünket használhatjuk és változtathatjuk szükség esetén
 
