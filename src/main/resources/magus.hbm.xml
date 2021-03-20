@@ -4,7 +4,7 @@
         <id name="id" type="java.lang.Integer" column="user_id">
             <generator class="increment"/>
         </id>
-        <property name="name" type="java.lang.String" column="name"/>
+        <property name="name" type="java.lang.String" column="name" unique="true"/>
         <property name="password" type="java.lang.String" column="password"/>
 
         <set name="characters" inverse="true"

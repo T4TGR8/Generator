@@ -1,29 +1,24 @@
 package magus.dao;
 
 import magus.Encryption;
+import magus.exceptions.UserAlredyExistException;
 import magus.exceptions.WrongUserNameOrPasswordException;
 import magus.model.*;
 import magus.model.Character;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
-import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class UserDAOTest {
     UserDAO dao = new UserDAO();
 
-    @Test
-    public void testCreateUser(){
+    @Test(expected = UserAlredyExistException.class)
+    public void testCreateUserTwiceWithException() throws UserAlredyExistException {
         dao.createUser(new User("TestUser2", "1234"));
     }
 
     @Test
-    public void testUserOneToManyCharacters(){
+    public void testUserOneToManyCharacters() throws UserAlredyExistException {
 
         User user = new User();
         user.setName("user");
@@ -48,7 +43,7 @@ public class UserDAOTest {
     }
 
     @Test
-    public void testInsertUserWithFullCharacter(){
+    public void testInsertUserWithFullCharacter() throws UserAlredyExistException {
         User user = new User();
         user.setName("Micsu");
         user.setPassword("123456");
@@ -126,14 +121,12 @@ public class UserDAOTest {
 
         User user = null;
         try {
-            user = dao.readUser("user", "jelszó");
+            user = dao.readUser("user", "jelszó##");
         } catch (WrongUserNameOrPasswordException e) {
             e.printStackTrace();
         }
 
         System.out.println(user.getName());
-
-        Assert.assertEquals("user", user.getName());
     }
 
 }

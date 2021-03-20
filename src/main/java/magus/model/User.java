@@ -34,7 +34,7 @@ public class User {
 
     public void setPassword(String password) {
        // this.password = Encryption.getMd5(password);
-         this.password = password;
+         this.password = password + "#";
     }
 
     public Set<Character> getCharacters() {
