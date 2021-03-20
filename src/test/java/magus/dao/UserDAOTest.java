@@ -1,6 +1,7 @@
 package magus.dao;
 
 import magus.Encryption;
+import magus.exceptions.InvalidAttributeException;
 import magus.exceptions.UserAlredyExistException;
 import magus.exceptions.WrongUserNameOrPasswordException;
 import magus.model.*;
@@ -43,7 +44,7 @@ public class UserDAOTest {
     }
 
     @Test
-    public void testInsertUserWithFullCharacter() throws UserAlredyExistException {
+    public void testInsertUserWithFullCharacter() throws UserAlredyExistException, InvalidAttributeException {
         User user = new User();
         user.setName("Micsu");
         user.setPassword("123456");

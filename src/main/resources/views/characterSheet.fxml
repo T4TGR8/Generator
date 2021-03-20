@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="magus.controllers.CharacterSheetController">
+
+    <content>
+        <Pane fx:id="pane" prefHeight="1684" prefWidth="1191">
+
+            <!-- Főjellemzők -->
+
+            <Label fx:id="labelStrength" layoutX="310" layoutY="223" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelExtraDamage" layoutX="450" layoutY="223" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelQuickness" layoutX="310" layoutY="275" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelQuicknessInArmor" layoutX="450" layoutY="275" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelDexterity" layoutX="310" layoutY="328" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelDexterityInArmor" layoutX="450" layoutY="328" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelEndurance" layoutX="310" layoutY="380" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelHealth" layoutX="310" layoutY="430" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelBeauty" layoutX="310" layoutY="482" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelIntelligence" layoutX="310" layoutY="533" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelWill" layoutX="310" layoutY="586" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelAstral" layoutX="310" layoutY="637" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelPerception" layoutX="310" layoutY="688" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- ÉP / FP -->
+
+            <Label fx:id="baseHealth" layoutX="580" layoutY="220" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="maxHealth" layoutX="580" layoutY="290" text="10">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="basePain" layoutX="700" layoutY="220" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="maxPain" layoutX="700" layoutY="290" text="10">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="XpPerPainResPoint" layoutX="590" layoutY="358" text="10">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="PainResPerLevel" layoutX="690" layoutY="358" text="10">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- KÉ -->
+
+            <Label fx:id="baseInitiativePoint" layoutX="850" layoutY="220" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="initiativePointInArmor" layoutX="850" layoutY="285" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="initiativePointModifier" layoutX="850" layoutY="355" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="initiativePointPerXp" layoutX="1035" layoutY="220" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="initiativePointWithoutWep" layoutX="1035" layoutY="285" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="combatModifierIni" layoutX="1035" layoutY="355" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- TÉ -->
+
+            <Label fx:id="baseAttackPoint" layoutX="850" layoutY="445" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="attackPointInArmor" layoutX="850" layoutY="515" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="attackPointModifier" layoutX="850" layoutY="580" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="attackPointPerXp" layoutX="1035" layoutY="445" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="attackPointWithoutWep" layoutX="1035" layoutY="515" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="combatModifierAp" layoutX="1035" layoutY="580" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- VÉ -->
+
+            <Label fx:id="baseDefencePoint" layoutX="850" layoutY="670" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="defencePointInArmor" layoutX="850" layoutY="740" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="defencePointModifier" layoutX="850" layoutY="805" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="defencePointPerXp" layoutX="1035" layoutY="670" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="defencePointWithoutWep" layoutX="1035" layoutY="740" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="combatModifierDef" layoutX="1035" layoutY="805" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- CÉ -->
+
+            <Label fx:id="baseAimPoint" layoutX="850" layoutY="890" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="aimPointInArmor" layoutX="850" layoutY="960" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="aimPointModifier" layoutX="850" layoutY="1030" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="aimPointPerXp" layoutX="1035" layoutY="890" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="aimPointWithoutWep" layoutX="1035" layoutY="960" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="combatModifierAim" layoutX="1035" layoutY="1030" text="5">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+        </Pane>
+    </content>
+</ScrollPane>

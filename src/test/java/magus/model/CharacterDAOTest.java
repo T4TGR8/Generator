@@ -1,6 +1,7 @@
 package magus.model;
 
 import magus.dao.CharacterDAO;
+import magus.exceptions.InvalidAttributeException;
 import org.junit.Test;
 
 public class CharacterDAOTest {
@@ -8,7 +9,7 @@ public class CharacterDAOTest {
     CharacterDAO dao = new CharacterDAO();
 
     @Test
-    public void testCharacterOneToOne(){
+    public void testCharacterOneToOne() throws InvalidAttributeException {
         Attributes a = new Attributes();
         a.setStrength(9000);
 
