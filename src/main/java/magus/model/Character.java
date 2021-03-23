@@ -2,6 +2,7 @@ package magus.model;
 
 public class Character {
     int id;
+
     String name;
     Caste caste;
     Race race;
@@ -167,5 +168,10 @@ public class Character {
     }
 
     public Character() {
+        this.attributes = new Attributes(this);
+        this.skills = new Skills(this);
+        this.psy = new Psy(this);
+        this.statistics = new CombatStatistics(this);
+        this.healthAndPainRes = new HealthAndPainRes(this);
     }
 }

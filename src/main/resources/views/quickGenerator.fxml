@@ -10,7 +10,7 @@
 
     <children>
         <Button layoutX="136.0" layoutY="468.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0"
-                text="Generálás" onAction="#generate" fx:id="buttonGenerate"/>
+                text="Generálás" onAction="#generateAction" fx:id="buttonGenerate"/>
         <Label layoutX="40.0" layoutY="50.0" text="Karakter neve">
             <font>
                 <Font size="14.0"/>

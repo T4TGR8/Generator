@@ -64,7 +64,7 @@ public class UserDAOTest {
         character.setUser(user);
         user.addCharacter(character);
 
-        Attributes atr = new Attributes();
+        Attributes atr = new Attributes(character);
         atr.setStrength(10);
         atr.setQuickness(10);
         atr.setDexterity(10);
@@ -79,14 +79,14 @@ public class UserDAOTest {
         atr.setCharacter(character);
         character.setAttributes(atr);
 
-        Skills skills = new Skills();
+        Skills skills = new Skills(character);
         skills.setBaseSkillPoints(100);
         skills.setSkillPointsPerLevel(5);
         skills.setSkillPoints(50);
         skills.setCharacter(character);
         character.setSkills(skills);
 
-        Psy psy = new Psy();
+        Psy psy = new Psy(character);
         psy.setPsySchool(PsySchool.KYR);
         psy.setUsageLevel(3);
         psy.setUsageGrade(3);
@@ -96,7 +96,7 @@ public class UserDAOTest {
         psy.setCharacter(character);
         character.setPsy(psy);
 
-        CombatStatistics stat = new CombatStatistics();
+        CombatStatistics stat = new CombatStatistics(character);
         stat.setInitiativePoints(10);
         stat.setAttackPoints(10);
         stat.setDefensePoints(10);
@@ -105,7 +105,7 @@ public class UserDAOTest {
         stat.setCharacter(character);
         character.setStatistics(stat);
 
-        HealthAndPainRes hpRes = new HealthAndPainRes();
+        HealthAndPainRes hpRes = new HealthAndPainRes(character);
         hpRes.setBaseHealthPoints(500);
         hpRes.setMaxHealthPoints(500);
         hpRes.setBasePainResistancePoints(50);

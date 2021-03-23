@@ -12,6 +12,7 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.stage.Stage;
 import magus.Main;
 import magus.model.Caste;
+import magus.model.Character;
 import magus.model.Personality;
 import magus.model.Race;
 
@@ -32,6 +33,7 @@ public class QuickGeneratorController implements Initializable {
     @FXML
     private Button buttonGenerate;
 
+    private Character character;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -46,12 +48,31 @@ public class QuickGeneratorController implements Initializable {
 
         spinnerLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1));
         spinnerLevel.setEditable(true);
+
+        character = new Character();
     }
 
     @FXML
-    public void generate() throws IOException {
+    public void generateAction() throws IOException {
+
+        setCharacterProperties();
+
         Stage window = (Stage) buttonGenerate.getScene().getWindow();
-        Parent root = FXMLLoader.load(Main.class.getResource("/views/characterSheet.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/characterSheet.fxml"));
+        Parent root = loader.load();
+
+        CharacterSheetController controller = loader.getController();
+        controller.setCharacter(character);
+
         window.setScene(new Scene(root, 1210, 800));
     }
+
+    private void setCharacterProperties() {
+        character.setCaste(Caste.getCasteByString(choiceBoxCaste.getSelectionModel().getSelectedItem()));
+        character.setRace(Race.getRaceByString(choiceBoxRace.getSelectionModel().getSelectedItem()));
+        character.setPersonality(Personality.getPersonalityByString(choiceBoxPersonality.getSelectionModel().getSelectedItem()));
+        character.setLevel(spinnerLevel.getValue());
+    }
+
 }

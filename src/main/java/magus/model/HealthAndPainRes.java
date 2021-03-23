@@ -2,6 +2,7 @@ package magus.model;
 
 public class HealthAndPainRes {
     int id;
+
     int baseHealthPoints;
     int maxHealthPoints;
     int basePainResistancePoints;
@@ -66,6 +67,7 @@ public class HealthAndPainRes {
         this.character = character;
     }
 
-    public HealthAndPainRes() {
+    public HealthAndPainRes(Character character) {
+        this.character = character;
     }
 }

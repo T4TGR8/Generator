@@ -30,4 +30,14 @@ public enum Caste {
     public String getCasteName() {
         return casteName;
     }
+
+    public static Caste getCasteByString(String caste){
+        for (Caste c : values()){
+            if (c.getCasteName().equals(caste)){
+                return c;
+            }
+        }
+
+        return null;
+    }
 }

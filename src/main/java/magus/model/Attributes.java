@@ -5,6 +5,7 @@ import magus.modifiers.attribmods.SummarizedAttributeModifiers;
 
 public class Attributes {
     int id;
+
     int strength;
     int quickness;
     int dexterity;
@@ -15,6 +16,7 @@ public class Attributes {
     int will;
     int astral;
     int perception;
+
     Character character;
 
     private SummarizedAttributeModifiers summ;
@@ -127,6 +129,8 @@ public class Attributes {
         else throw new InvalidAttributeException();
     }
 
+
+
     public Character getCharacter() {
         return character;
     }
@@ -134,6 +138,8 @@ public class Attributes {
     public void setCharacter(Character character) {
         this.character = character;
     }
+
+
 
     public SummarizedAttributeModifiers getSumm() {
         return summ;
@@ -143,7 +149,7 @@ public class Attributes {
         this.summ = summ;
     }
 
-
-    public Attributes() {
+    public Attributes(Character character) {
+        this.character = character;
     }
 }

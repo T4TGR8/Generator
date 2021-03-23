@@ -10,24 +10,24 @@ public class CharacterDAOTest {
 
     @Test
     public void testCharacterOneToOne() throws InvalidAttributeException {
-        Attributes a = new Attributes();
-        a.setStrength(9000);
+        Character c = new Character();
+        c.setName("Micsu");
 
-        Skills s = new Skills();
+        Attributes a = new Attributes(c);
+        a.setStrength(9);
+
+        Skills s = new Skills(c);
         s.setBaseSkillPoints(100);
 
-        Psy p = new Psy();
+        Psy p = new Psy(c);
         p.setPsyPoints(42);
 
-        HealthAndPainRes hp = new HealthAndPainRes();
+        HealthAndPainRes hp = new HealthAndPainRes(c);
         hp.setBaseHealthPoints(10);
         hp.setBasePainResistancePoints(10);
 
-        CombatStatistics st = new CombatStatistics();
+        CombatStatistics st = new CombatStatistics(c);
         st.setAttackPoints(9000);
-
-        Character c = new Character();
-        c.setName("Micsu");
 
         c.setAttributes(a);
         c.setHealthAndPainRes(hp);

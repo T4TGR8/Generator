@@ -28,4 +28,14 @@ public enum Personality {
     public String getPersonalityString() {
         return personalityString;
     }
+
+    public static Personality getPersonalityByString(String personality ){
+        for ( Personality p : values() ){
+            if (p.getPersonalityString().equals(personality)){
+                return p;
+            }
+        }
+
+        return null;
+    }
 }
