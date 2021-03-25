@@ -67,6 +67,9 @@ public class HealthAndPainRes {
         this.character = character;
     }
 
+    public HealthAndPainRes() {
+    }
+
     public HealthAndPainRes(Character character) {
         this.character = character;
     }

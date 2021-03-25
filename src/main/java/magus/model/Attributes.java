@@ -34,8 +34,8 @@ public class Attributes {
     }
 
     public void setStrength(int strength) throws InvalidAttributeException {
-        if(3 <= strength && strength <= 28) this.strength = strength;
-        else if(strength < 3) this.strength = 3;
+        if (3 <= strength && strength <= 28) this.strength = strength;
+        else if (strength < 3) this.strength = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -44,8 +44,8 @@ public class Attributes {
     }
 
     public void setQuickness(int quickness) throws InvalidAttributeException {
-        if(3 <= quickness && quickness <= 24) this.quickness = quickness;
-        else if(quickness < 3) this.quickness = 3;
+        if (3 <= quickness && quickness <= 24) this.quickness = quickness;
+        else if (quickness < 3) this.quickness = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -54,8 +54,8 @@ public class Attributes {
     }
 
     public void setDexterity(int dexterity) throws InvalidAttributeException {
-        if(3 <= dexterity && dexterity <= 24) this.dexterity = dexterity;
-        else if(dexterity < 3) this.dexterity = 3;
+        if (3 <= dexterity && dexterity <= 24) this.dexterity = dexterity;
+        else if (dexterity < 3) this.dexterity = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -64,8 +64,8 @@ public class Attributes {
     }
 
     public void setEndurance(int endurance) throws InvalidAttributeException {
-        if(3 <= endurance && endurance <= 24) this.endurance = endurance;
-        else if(endurance < 3) this.endurance = 3;
+        if (3 <= endurance && endurance <= 24) this.endurance = endurance;
+        else if (endurance < 3) this.endurance = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -74,8 +74,8 @@ public class Attributes {
     }
 
     public void setHealth(int health) throws InvalidAttributeException {
-        if(3 <= health && health <= 24) this.health = health;
-        else if(health < 3) this.health = 3;
+        if (3 <= health && health <= 24) this.health = health;
+        else if (health < 3) this.health = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -84,8 +84,8 @@ public class Attributes {
     }
 
     public void setBeauty(int beauty) throws InvalidAttributeException {
-        if(3 <= beauty && beauty <= 24) this.beauty = beauty;
-        else if(beauty < 3) this.beauty = 3;
+        if (3 <= beauty && beauty <= 24) this.beauty = beauty;
+        else if (beauty < 3) this.beauty = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -94,8 +94,8 @@ public class Attributes {
     }
 
     public void setIntelligence(int intelligence) throws InvalidAttributeException {
-        if(3 <= intelligence && intelligence <= 20) this.intelligence = intelligence;
-        else if(intelligence < 3) this.intelligence = 3;
+        if (3 <= intelligence && intelligence <= 20) this.intelligence = intelligence;
+        else if (intelligence < 3) this.intelligence = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -104,8 +104,8 @@ public class Attributes {
     }
 
     public void setWill(int will) throws InvalidAttributeException {
-        if(3 <= will && will <= 24) this.will = will;
-        else if(will < 3) this.will = 3;
+        if (3 <= will && will <= 24) this.will = will;
+        else if (will < 3) this.will = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -114,8 +114,8 @@ public class Attributes {
     }
 
     public void setAstral(int astral) throws InvalidAttributeException {
-        if(3 <= astral && astral <= 24) this.astral = astral;
-        else if(astral < 3) this.astral = 3;
+        if (3 <= astral && astral <= 24) this.astral = astral;
+        else if (astral < 3) this.astral = 3;
         else throw new InvalidAttributeException();
     }
 
@@ -124,11 +124,10 @@ public class Attributes {
     }
 
     public void setPerception(int perception) throws InvalidAttributeException {
-        if(3 <= perception && perception <= 24) this.perception = perception;
-        else if(perception < 3) this.perception = 3;
+        if (3 <= perception && perception <= 24) this.perception = perception;
+        else if (perception < 3) this.perception = 3;
         else throw new InvalidAttributeException();
     }
-
 
 
     public Character getCharacter() {
@@ -140,13 +139,16 @@ public class Attributes {
     }
 
 
-
     public SummarizedAttributeModifiers getSumm() {
         return summ;
     }
 
     public void setSumm(SummarizedAttributeModifiers summ) {
         this.summ = summ;
+    }
+
+    public Attributes() {
+
     }
 
     public Attributes(Character character) {

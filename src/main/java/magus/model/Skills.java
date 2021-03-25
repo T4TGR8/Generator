@@ -49,6 +49,9 @@ public class Skills {
         this.character = character;
     }
 
+    public Skills() {
+    }
+
     public Skills(Character character) {
         this.character = character;
     }

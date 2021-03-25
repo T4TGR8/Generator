@@ -107,6 +107,9 @@ public class CombatStatistics {
         this.character = character;
     }
 
+    public CombatStatistics() {
+    }
+
     public CombatStatistics(Character character) {
         this.character = character;
     }

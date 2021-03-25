@@ -79,6 +79,7 @@ public class CharacterSheetController implements Initializable {
 
     public void setCharacter(Character character) {
         this.character = character;
+
         generateCharacterFromCaste();
 
         setLabels();

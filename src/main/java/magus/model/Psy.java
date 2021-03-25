@@ -75,6 +75,9 @@ public class Psy {
         this.character = character;
     }
 
+    public Psy() {
+    }
+
     public Psy(Character character) {
         this.character = character;
     }
