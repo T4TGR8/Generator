@@ -40,7 +40,7 @@ public class MainWindowController {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/manualGenerator.fxml"));
         Parent root = loader.load();
 
-        window.setScene(new Scene(root, 1280, 720));
+        window.setScene(new Scene(root, 990, 720));
     }
 
 }

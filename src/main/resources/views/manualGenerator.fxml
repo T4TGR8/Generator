@@ -4,17 +4,18 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="magus.controllers.ManualGeneratorController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="magus.controllers.ManualGeneratorController">
    <children>
-      <Button fx:id="buttonBack" layoutX="1052.0" layoutY="664.0" mnemonicParsing="false" onAction="#backButtonAction" text="Vissza" />
-      <Button fx:id="buttonGenerate" layoutX="1163.0" layoutY="664.0" mnemonicParsing="false" onAction="#generateAction" text="Generálás" />
-      <Spinner fx:id="spinnerLevel" layoutX="815.0" layoutY="664.0" />
-      <ChoiceBox fx:id="choiceBoxCaste" layoutX="814.0" layoutY="550.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="choiceBoxPersonality" layoutX="814.0" layoutY="588.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="choiceBoxRace" layoutX="814.0" layoutY="626.0" prefWidth="150.0" />
+      <Button fx:id="buttonBack" layoutX="786.0" layoutY="659.0" mnemonicParsing="false" onAction="#backButtonAction" text="Vissza" />
+      <Button fx:id="buttonGenerate" layoutX="897.0" layoutY="659.0" mnemonicParsing="false" onAction="#generateAction" text="Generálás" />
+      <Spinner fx:id="spinnerLevel" layoutX="417.0" layoutY="492.0" />
+      <ChoiceBox fx:id="choiceBoxCaste" layoutX="416.0" layoutY="262.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBoxRace" layoutX="416.0" layoutY="300.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBoxPersonality" layoutX="416.0" layoutY="338.0" prefWidth="150.0" />
       <Label layoutX="41.0" layoutY="30.0" text="Képességek">
          <font>
             <Font size="14.0" />
@@ -30,21 +31,122 @@
       <Label layoutX="27.0" layoutY="288.0" text="Akaraterő" />
       <Label layoutX="27.0" layoutY="319.0" text="Asztrál" />
       <Label layoutX="27.0" layoutY="350.0" text="Érzékelés" />
-      <Spinner layoutX="114.0" layoutY="253.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="315.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="284.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="160.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="222.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="191.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="114.0" layoutY="346.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="279.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="279.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
-      <Spinner layoutX="279.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerIntelligence" layoutX="114.0" layoutY="253.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAstral" layoutX="114.0" layoutY="315.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerWill" layoutX="114.0" layoutY="284.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerEndurance" layoutX="114.0" layoutY="160.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerBeauty" layoutX="114.0" layoutY="222.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerHealth" layoutX="114.0" layoutY="191.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerStrength" layoutX="114.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDexterity" layoutX="114.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerQuickness" layoutX="114.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerPerception" layoutX="114.0" layoutY="346.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDamageBonus" layoutX="279.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerQuicknessInArmor" layoutX="279.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDexterityInArmor" layoutX="279.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
       <Label layoutX="193.0" layoutY="71.0" text="Sebzés Járulék" />
       <Label layoutX="193.0" layoutY="102.0" text="Páncélban" />
       <Label layoutX="193.0" layoutY="133.0" text="Páncélban" />
+      <Label layoutX="411.0" layoutY="30.0" text="Életerő">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="71.0" text="Ép alap" />
+      <Label layoutX="509.0" layoutY="71.0" text="Fp alap" />
+      <Spinner fx:id="spinnerBaseHealth" layoutX="438.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="391.0" layoutY="102.0" text="Max. Ép" />
+      <Label layoutX="391.0" layoutY="133.0" text="Tp/Fp" />
+      <Spinner fx:id="spinnerExperiencePerPainResistance" layoutX="438.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerMaxHealth" layoutX="438.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="509.0" layoutY="133.0" text="Fp/szint" />
+      <Label layoutX="509.0" layoutY="102.0" text="Max. Fp" />
+      <Spinner fx:id="spinnerPainResistancePerLevel" layoutX="565.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerMaxPainResistance" layoutX="565.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerBasePainResistance" layoutX="565.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="738.0" layoutY="30.0" text="Kezdeményező érték(KÉ)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="661.0" layoutY="71.0" text="Alap" />
+      <Label layoutX="661.0" layoutY="102.0" text="Páncélban" />
+      <Label layoutX="661.0" layoutY="133.0" text="Módosítók" />
+      <Spinner fx:id="spinnerBaseInitiative" layoutX="729.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerInitiativeModifiers" layoutX="729.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerInitiativeInArmor" layoutX="729.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="815.0" layoutY="71.0" text="Tp/KÉ" />
+      <Label layoutX="815.0" layoutY="102.0" text="Fegyver nékül" />
+      <Label layoutX="815.0" layoutY="133.0" text="HM" />
+      <Spinner fx:id="spinnerExperiencePerInitiative" layoutX="900.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerInitiativeHM" layoutX="900.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerInitiativeWithoutWeapon" layoutX="900.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="761.0" layoutY="175.0" text="Támadó érték(TÉ)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="661.0" layoutY="214.0" text="Alap" />
+      <Label layoutX="661.0" layoutY="245.0" text="Páncélban" />
+      <Label layoutX="661.0" layoutY="276.0" text="Módosítók" />
+      <Spinner fx:id="spinnerBaseAttack" layoutX="729.0" layoutY="210.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAttackModifiers" layoutX="729.0" layoutY="272.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAttackInArmor" layoutX="729.0" layoutY="241.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="815.0" layoutY="214.0" text="Tp/TÉ" />
+      <Label layoutX="815.0" layoutY="245.0" text="Fegyver nékül" />
+      <Label layoutX="815.0" layoutY="276.0" text="HM" />
+      <Spinner fx:id="spinnerExperiencePerAttack" layoutX="900.0" layoutY="210.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAttackHM" layoutX="900.0" layoutY="272.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAttackWithoutWeapon" layoutX="900.0" layoutY="241.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="762.0" layoutY="319.0" text="Védő érték(VÉ)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="662.0" layoutY="358.0" text="Alap" />
+      <Label layoutX="662.0" layoutY="389.0" text="Páncélban" />
+      <Label layoutX="662.0" layoutY="420.0" text="Módosítók" />
+      <Spinner fx:id="spinnerBaseDefense" layoutX="730.0" layoutY="354.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDefenseModifiers" layoutX="730.0" layoutY="416.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDefenseInArmor" layoutX="730.0" layoutY="385.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="816.0" layoutY="358.0" text="Tp/VÉ" />
+      <Label layoutX="816.0" layoutY="389.0" text="Fegyver nékül" />
+      <Label layoutX="816.0" layoutY="420.0" text="HM" />
+      <Spinner fx:id="spinnerExperiencePerDefense" layoutX="901.0" layoutY="354.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDefenseWithoutWeapon" layoutX="901.0" layoutY="416.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerDefenseHM" layoutX="901.0" layoutY="385.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="762.0" layoutY="463.0" text="Célzó érték(CÉ)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="662.0" layoutY="502.0" text="Alap" />
+      <Label layoutX="662.0" layoutY="533.0" text="Páncélban" />
+      <Label layoutX="662.0" layoutY="564.0" text="Módosítók" />
+      <Spinner fx:id="spinnerBaseAiming" layoutX="730.0" layoutY="498.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAimingInArmor" layoutX="730.0" layoutY="560.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAimingModifiers" layoutX="730.0" layoutY="529.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="816.0" layoutY="502.0" text="Tp/CÉ" />
+      <Label layoutX="816.0" layoutY="533.0" text="Fegyver nékül" />
+      <Label layoutX="816.0" layoutY="564.0" text="HM" />
+      <Spinner fx:id="spinnerExperiencePerAiming" layoutX="901.0" layoutY="498.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAimingHM" layoutX="901.0" layoutY="560.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner fx:id="spinnerAimingWithoutWeapon" layoutX="901.0" layoutY="529.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="377.0" layoutY="177.0" text="A Karakter neve">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="349.0" layoutY="210.0" />
+      <Label layoutX="311.0" layoutY="266.0" text="Kaszt" />
+      <Label layoutX="311.0" layoutY="303.0" text="Faj" />
+      <Label layoutX="311.0" layoutY="342.0" text="Jellem" />
+      <TextField layoutX="417.0" layoutY="379.0" />
+      <TextField layoutX="417.0" layoutY="418.0" />
+      <TextField layoutX="417.0" layoutY="453.0" />
+      <Label layoutX="311.0" layoutY="383.0" text="Vallás" />
+      <Label layoutX="311.0" layoutY="422.0" text="Szölőföld" />
+      <Label layoutX="311.0" layoutY="457.0" text="Iskola" />
+      <Label layoutX="311.0" layoutY="496.0" text="Szint" />
    </children>
 </Pane>
