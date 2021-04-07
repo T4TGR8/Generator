@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class QuickGeneratorController implements Initializable {
+public class ManualGeneratorController implements Initializable {
 
     @FXML
     private ChoiceBox<String> choiceBoxCaste;

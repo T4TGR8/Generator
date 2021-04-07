@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="magus.controllers.ManualGeneratorController">
+   <children>
+      <Button fx:id="buttonBack" layoutX="1052.0" layoutY="664.0" mnemonicParsing="false" onAction="#backButtonAction" text="Vissza" />
+      <Button fx:id="buttonGenerate" layoutX="1163.0" layoutY="664.0" mnemonicParsing="false" onAction="#generateAction" text="Generálás" />
+      <Spinner fx:id="spinnerLevel" layoutX="815.0" layoutY="664.0" />
+      <ChoiceBox fx:id="choiceBoxCaste" layoutX="814.0" layoutY="550.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBoxPersonality" layoutX="814.0" layoutY="588.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBoxRace" layoutX="814.0" layoutY="626.0" prefWidth="150.0" />
+      <Label layoutX="41.0" layoutY="30.0" text="Képességek">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="71.0" text="Erő" />
+      <Label layoutX="27.0" layoutY="102.0" text="Gyorsaság" />
+      <Label layoutX="27.0" layoutY="133.0" text="Ügyesség" />
+      <Label layoutX="27.0" layoutY="164.0" text="Állóképesség" />
+      <Label layoutX="27.0" layoutY="195.0" text="Egészség" />
+      <Label layoutX="27.0" layoutY="226.0" text="Szépség" />
+      <Label layoutX="27.0" layoutY="257.0" text="Intelligencia" />
+      <Label layoutX="27.0" layoutY="288.0" text="Akaraterő" />
+      <Label layoutX="27.0" layoutY="319.0" text="Asztrál" />
+      <Label layoutX="27.0" layoutY="350.0" text="Érzékelés" />
+      <Spinner layoutX="114.0" layoutY="253.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="315.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="284.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="160.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="222.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="191.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="114.0" layoutY="346.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="279.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="279.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" />
+      <Spinner layoutX="279.0" layoutY="129.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="193.0" layoutY="71.0" text="Sebzés Járulék" />
+      <Label layoutX="193.0" layoutY="102.0" text="Páncélban" />
+      <Label layoutX="193.0" layoutY="133.0" text="Páncélban" />
+   </children>
+</Pane>

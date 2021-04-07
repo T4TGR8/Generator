@@ -4,81 +4,79 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
-      prefWidth="360.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="magus.controllers.QuickGeneratorController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="magus.controllers.QuickGeneratorController">
 
     <children>
-        <Button layoutX="136.0" layoutY="468.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0"
-                text="Generálás" onAction="#generateAction" fx:id="buttonGenerate"/>
+        <Button fx:id="buttonGenerate" layoutX="198.0" layoutY="467.0" mnemonicParsing="false" onAction="#generateAction" prefHeight="25.0" prefWidth="74.0" text="Generálás" />
         <Label layoutX="40.0" layoutY="50.0" text="Karakter neve">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="95.0" text="Kaszt">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="140.0" text="Faj">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="185.0" text="Nem">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="230.0" text="Jellem">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="275.0" text="Vallás">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="320.0" text="Szülőföld">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="365.0" text="Iskola">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="410.0" text="Szint">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="choiceBoxCaste" layoutX="160.0" layoutY="93.0" prefWidth="150.0"/>
-        <ChoiceBox fx:id="choiceBoxRace" layoutX="160.0" layoutY="138.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="choiceBoxCaste" layoutX="160.0" layoutY="93.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="choiceBoxRace" layoutX="160.0" layoutY="138.0" prefWidth="150.0" />
 
         <RadioButton layoutX="160.0" layoutY="185.0" mnemonicParsing="false" text="Férfi" toggleGroup="$Sex">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
             <toggleGroup>
-                <ToggleGroup fx:id="Sex"/>
+                <ToggleGroup fx:id="Sex" />
             </toggleGroup>
         </RadioButton>
         <RadioButton layoutX="234.0" layoutY="185.0" mnemonicParsing="false" text="Nő" toggleGroup="$Sex">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </RadioButton>
 
-        <TextField fx:id="textFiled_characterName" layoutX="160.0" layoutY="48.0"/>
-        <ChoiceBox fx:id="choiceBoxPersonality" layoutX="160.0" layoutY="218.0" prefWidth="150.0"/>
-        <TextField layoutX="160.0" layoutY="273.0"/>
-        <TextField layoutX="160.0" layoutY="318.0"/>
-        <TextField layoutX="160.0" layoutY="363.0"/>
-        <Spinner fx:id="spinnerLevel" layoutX="160.0" layoutY="408.0"/>
+        <TextField fx:id="textFiled_characterName" layoutX="160.0" layoutY="48.0" />
+        <ChoiceBox fx:id="choiceBoxPersonality" layoutX="160.0" layoutY="218.0" prefWidth="150.0" />
+        <TextField layoutX="160.0" layoutY="273.0" />
+        <TextField layoutX="160.0" layoutY="318.0" />
+        <TextField layoutX="160.0" layoutY="363.0" />
+        <Spinner fx:id="spinnerLevel" layoutX="160.0" layoutY="408.0" />
+      <Button layoutX="72.0" layoutY="467.0" mnemonicParsing="false" text="Vissza" fx:id="buttonBack" onAction="#backButtonAction"/>
 
     </children>
 </Pane>
