@@ -70,11 +70,11 @@
             </font>
         </RadioButton>
 
-        <TextField fx:id="textFiled_characterName" layoutX="160.0" layoutY="48.0" />
+        <TextField fx:id="textField_characterName" layoutX="160.0" layoutY="48.0" />
         <ChoiceBox fx:id="choiceBoxPersonality" layoutX="160.0" layoutY="218.0" prefWidth="150.0" />
-        <TextField layoutX="160.0" layoutY="273.0" />
-        <TextField layoutX="160.0" layoutY="318.0" />
-        <TextField layoutX="160.0" layoutY="363.0" />
+        <ChoiceBox fx:id="choiceBoxReligion" layoutX="160.0" layoutY="273.0" prefWidth="150.0" />
+        <TextField fx:id="textField_characterBirthplace" layoutX="160.0" layoutY="318.0" />
+        <TextField fx:id="textField_characterSchool" layoutX="160.0" layoutY="363.0" />
         <Spinner fx:id="spinnerLevel" layoutX="160.0" layoutY="408.0" />
       <Button layoutX="72.0" layoutY="467.0" mnemonicParsing="false" text="Vissza" fx:id="buttonBack" onAction="#backButtonAction"/>
 

@@ -11,6 +11,49 @@
     <content>
         <Pane fx:id="pane" prefHeight="1684" prefWidth="1191">
 
+            <!-- Szemelyes adatok -->
+
+            <Label fx:id="labelName" layoutX="460" layoutY="450" text="20">
+                <font>
+                    <Font name="System Bold" size="32.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelCaste" layoutX="535" layoutY="520" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelRace" layoutX="535" layoutY="554" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelPersonality" layoutX="535" layoutY="590" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelReligion" layoutX="535" layoutY="623" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelBirthplace" layoutX="535" layoutY="657" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelSchool" layoutX="535" layoutY="690" text="20">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="labelLevel" layoutX="580" layoutY="805" text="20">
+                <font>
+                    <Font name="System Bold" size="40.0"/>
+                </font>
+            </Label>
+
             <!-- Főjellemzők -->
 
             <Label fx:id="labelStrength" layoutX="310" layoutY="223" text="20">

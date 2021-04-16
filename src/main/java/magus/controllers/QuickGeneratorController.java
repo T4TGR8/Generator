@@ -5,16 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import magus.Main;
-import magus.model.Caste;
+import magus.model.*;
 import magus.model.Character;
-import magus.model.Personality;
-import magus.model.Race;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,11 +18,19 @@ import java.util.ResourceBundle;
 public class QuickGeneratorController implements Initializable {
 
     @FXML
+    private TextField textField_characterName;
+    @FXML
     private ChoiceBox<String> choiceBoxCaste;
     @FXML
     private ChoiceBox<String> choiceBoxRace;
     @FXML
     private ChoiceBox<String> choiceBoxPersonality;
+    @FXML
+    private ChoiceBox<String> choiceBoxReligion;
+    @FXML
+    private TextField textField_characterBirthplace;
+    @FXML
+    private TextField textField_characterSchool;
     @FXML
     private Spinner<Integer> spinnerLevel;
     @FXML
@@ -47,6 +50,9 @@ public class QuickGeneratorController implements Initializable {
 
         for (Personality p : Personality.values())
             choiceBoxPersonality.getItems().add(p.getPersonalityString());
+
+        for (Religion r : Religion.values())
+            choiceBoxReligion.getItems().add(r.getReligionString());
 
         spinnerLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1));
         spinnerLevel.setEditable(true);
@@ -82,9 +88,13 @@ public class QuickGeneratorController implements Initializable {
     }
 
     private void setCharacterProperties() {
+        character.setName(textField_characterName.getText());
         character.setCaste(Caste.getCasteByString(choiceBoxCaste.getSelectionModel().getSelectedItem()));
         character.setRace(Race.getRaceByString(choiceBoxRace.getSelectionModel().getSelectedItem()));
         character.setPersonality(Personality.getPersonalityByString(choiceBoxPersonality.getSelectionModel().getSelectedItem()));
+        character.setReligion(Religion.getReligionByString(choiceBoxReligion.getSelectionModel().getSelectedItem()));
+        character.setBirthplace(textField_characterBirthplace.getText());
+        character.setSchool(textField_characterSchool.getText());
         character.setLevel(spinnerLevel.getValue());
     }
 

@@ -22,6 +22,23 @@ public class CharacterSheetController implements Initializable {
     private Pane pane;
 
     @FXML
+    private Label labelName;
+    @FXML
+    private Label labelCaste;
+    @FXML
+    private Label labelRace;
+    @FXML
+    private Label labelPersonality;
+    @FXML
+    private Label labelReligion;
+    @FXML
+    private Label labelBirthplace;
+    @FXML
+    private Label labelSchool;
+    @FXML
+    private Label labelLevel;
+
+    @FXML
     private Label labelStrength;
     @FXML
     private Label labelQuickness;
@@ -86,6 +103,15 @@ public class CharacterSheetController implements Initializable {
     }
 
     private void setLabels() {
+        labelName.setText(character.getName());
+        labelCaste.setText(character.getCaste().getCasteName());
+        labelRace.setText(character.getRace().getRaceString());
+        labelPersonality.setText(character.getPersonality().getPersonalityString());
+        labelReligion.setText(character.getReligion().getReligionString());
+        labelBirthplace.setText(character.getBirthplace());
+        labelSchool.setText(character.getSchool());
+        labelLevel.setText(String.valueOf(character.getLevel()));
+
         Attributes atr = character.getAttributes();
         labelStrength.setText(String.valueOf(atr.getStrength()));
         labelQuickness.setText(String.valueOf(atr.getQuickness()));
