@@ -5,16 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import magus.Main;
-import magus.model.Caste;
+import magus.exceptions.InvalidAttributeException;
+import magus.model.*;
 import magus.model.Character;
-import magus.model.Personality;
-import magus.model.Race;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,11 +19,19 @@ import java.util.ResourceBundle;
 public class ManualGeneratorController implements Initializable {
 
     @FXML
+    private TextField textField_characterName;
+    @FXML
     private ChoiceBox<String> choiceBoxCaste;
     @FXML
     private ChoiceBox<String> choiceBoxRace;
     @FXML
     private ChoiceBox<String> choiceBoxPersonality;
+    @FXML
+    private ChoiceBox<String> choiceBoxReligion;
+    @FXML
+    private TextField textField_characterBirthplace;
+    @FXML
+    private TextField textField_characterSchool;
     @FXML
     private Spinner<Integer> spinnerLevel;
     @FXML
@@ -123,6 +127,12 @@ public class ManualGeneratorController implements Initializable {
 
     private Character character;
 
+    private Attributes attributes = new Attributes();
+
+    private CombatStatistics statistics = new CombatStatistics();
+
+    private HealthAndPainRes hpr = new HealthAndPainRes();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         for (Caste c : Caste.values())
@@ -133,6 +143,9 @@ public class ManualGeneratorController implements Initializable {
 
         for (Personality p : Personality.values())
             choiceBoxPersonality.getItems().add(p.getPersonalityString());
+
+        for (Religion r : Religion.values())
+            choiceBoxReligion.getItems().add(r.getReligionString());
 
         spinnerLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1));
         spinnerLevel.setEditable(true);
@@ -272,6 +285,9 @@ public class ManualGeneratorController implements Initializable {
     @FXML
     public void generateAction() throws IOException {
 
+        setCharacterAttributes();
+        setCharacterStatistics();
+        setCharacterHPR();
         setCharacterProperties();
 
         Stage window = (Stage) buttonGenerate.getScene().getWindow();
@@ -280,7 +296,7 @@ public class ManualGeneratorController implements Initializable {
         Parent root = loader.load();
 
         CharacterSheetController controller = loader.getController();
-        controller.setCharacter(character);
+        controller.setManualCharacter(character);
 
         window.setScene(new Scene(root, 1210, 800));
     }
@@ -296,11 +312,87 @@ public class ManualGeneratorController implements Initializable {
         window.setScene(new Scene(root, 393, 252));
     }
 
+    private void setCharacterAttributes() {
+        try {
+            attributes.setStrength(spinnerStrength.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setQuickness(spinnerQuickness.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setDexterity(spinnerDexterity.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setEndurance(spinnerEndurance.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setHealth(spinnerHealth.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setBeauty(spinnerStrength.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setIntelligence(spinnerIntelligence.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setWill(spinnerWill.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setAstral(spinnerAstral.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+        try {
+            attributes.setPerception(spinnerPerception.getValue());
+        } catch (InvalidAttributeException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setCharacterStatistics() {
+
+        statistics.setBaseInitiativePoints(spinnerBaseInitiative.getValue());
+        statistics.setBaseAttackPoints(spinnerBaseAttack.getValue());
+        statistics.setBaseDefensePoints(spinnerBaseDefense.getValue());
+        statistics.setBaseAimingPoints(spinnerBaseAiming.getValue());
+    }
+
+    private void setCharacterHPR() {
+
+        hpr.setBaseHealthPoints(spinnerBaseHealth.getValue());
+        hpr.setBasePainResistancePoints(spinnerBasePainResistance.getValue());
+        hpr.setPainResistancePointsPerLevel(spinnerPainResistancePerLevel.getValue());
+    }
+
     private void setCharacterProperties() {
+
+        character.setName(textField_characterName.getText());
         character.setCaste(Caste.getCasteByString(choiceBoxCaste.getSelectionModel().getSelectedItem()));
         character.setRace(Race.getRaceByString(choiceBoxRace.getSelectionModel().getSelectedItem()));
         character.setPersonality(Personality.getPersonalityByString(choiceBoxPersonality.getSelectionModel().getSelectedItem()));
+        character.setReligion(Religion.getReligionByString(choiceBoxReligion.getSelectionModel().getSelectedItem()));
+        character.setBirthplace(textField_characterBirthplace.getText());
+        character.setSchool(textField_characterSchool.getText());
         character.setLevel(spinnerLevel.getValue());
+        character.setAttributes(attributes);
+        character.setStatistics(statistics);
+        character.setHealthAndPainRes(hpr);
     }
 
 }

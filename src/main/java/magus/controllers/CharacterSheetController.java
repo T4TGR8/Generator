@@ -101,6 +101,12 @@ public class CharacterSheetController implements Initializable {
         setLabels();
     }
 
+    public void setManualCharacter(Character character) {
+        this.character = character;
+
+        setLabels();
+    }
+
     private void setLabels() {
         labelName.setText(character.getName());
         labelCaste.setText(character.getCaste().getCasteName());
