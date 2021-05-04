@@ -1,0 +1,19 @@
+.root{
+    -fx-background-color: #946e4b;
+}
+
+.label{
+    -fx-font-family: Impact;
+}
+
+.spinner{
+    -fx-font-family: Impact;
+}
+
+.radio-button{
+    -fx-font-family: Impact;
+}
+
+.text-field{
+    -fx-font-family: Impact;
+}
