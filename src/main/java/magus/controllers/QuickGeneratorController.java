@@ -73,7 +73,9 @@ public class QuickGeneratorController implements Initializable {
         CharacterSheetController controller = loader.getController();
         controller.setCharacter(character);
 
-        window.setScene(new Scene(root, 1210, 800));
+        Scene scene = new Scene(root, 1210, 800);
+        scene.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
+        window.setScene(scene);
     }
 
     @FXML
