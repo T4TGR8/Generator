@@ -8,6 +8,7 @@
 
 .spinner{
     -fx-font-family: Impact;
+    -fx-background-color: "gray";
 }
 
 .radio-button{
@@ -16,4 +17,14 @@
 
 .text-field{
     -fx-font-family: Impact;
+    -fx-background-color: "gray";
+}
+
+.button{
+    -fx-background-color: "gray";
+    -fx-color-label-visible: "white";
+}
+
+.choice-box{
+    -fx-background-color: "gray";
 }
