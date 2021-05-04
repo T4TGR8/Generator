@@ -1,5 +1,5 @@
 .root{
-    -fx-background-color: #946e4b;
+    -fx-background-color: #a89282;
 }
 
 .label{
@@ -8,7 +8,7 @@
 
 .spinner{
     -fx-font-family: Impact;
-    -fx-background-color: "gray";
+    -fx-background-color: #d1d1d1;
 }
 
 .radio-button{
@@ -17,14 +17,13 @@
 
 .text-field{
     -fx-font-family: Impact;
-    -fx-background-color: "gray";
+    -fx-background-color: #d1d1d1;
 }
 
 .button{
-    -fx-background-color: "gray";
-    -fx-color-label-visible: "white";
+    -fx-background-color: #d1d1d1;
 }
 
 .choice-box{
-    -fx-background-color: "gray";
+    -fx-background-color: #d1d1d1;
 }
