@@ -28,8 +28,9 @@ public class MainWindowController {
 
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/quickGenerator.fxml"));
         Parent root = loader.load();
-
-        window.setScene(new Scene(root, 360, 540));
+        Scene scene = new Scene(root, 360, 540);
+        scene.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
+        window.setScene(scene);
     }
 
     @FXML
@@ -39,8 +40,9 @@ public class MainWindowController {
 
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/manualGenerator.fxml"));
         Parent root = loader.load();
-
-        window.setScene(new Scene(root, 990, 720));
+        Scene scene = new Scene(root, 990, 720);
+        scene.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
+        window.setScene(scene);
     }
 
 }
