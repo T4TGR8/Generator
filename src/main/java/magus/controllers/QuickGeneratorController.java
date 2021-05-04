@@ -83,8 +83,9 @@ public class QuickGeneratorController implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/mainWindow.fxml"));
         Parent root = loader.load();
-
-        window.setScene(new Scene(root, 393, 252));
+        Scene scene = new Scene(root, 393, 252);
+        scene.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
+        window.setScene(scene);
     }
 
     private void setCharacterProperties() {
