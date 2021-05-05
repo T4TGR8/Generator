@@ -172,7 +172,7 @@
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="initiativePointPerXp" layoutX="1035" layoutY="220" text="-">
+            <Label fx:id="initiativePointPerXp" layoutX="1035" layoutY="220" text="5">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
@@ -205,7 +205,7 @@
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="attackPointPerXp" layoutX="1035" layoutY="445" text="-">
+            <Label fx:id="attackPointPerXp" layoutX="1035" layoutY="445" text="5">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
@@ -238,7 +238,7 @@
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="defencePointPerXp" layoutX="1035" layoutY="670" text="-">
+            <Label fx:id="defencePointPerXp" layoutX="1035" layoutY="670" text="5">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
@@ -271,7 +271,7 @@
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="aimPointPerXp" layoutX="1035" layoutY="890" text="-">
+            <Label fx:id="aimPointPerXp" layoutX="1035" layoutY="890" text="5">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
@@ -286,40 +286,6 @@
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-
-            <!-- Harcérték módositók -->
-
-            <Label fx:id="combatModifierPerLevel" layoutX="815" layoutY="1153" text="88">
-                <font>
-                    <Font name="System Bold" size="22.0"/>
-                </font>
-            </Label>
-            <Label fx:id="combatModifierInitiativePoint" layoutX="880" layoutY="1153" text="12">
-                <font>
-                    <Font name="System Bold" size="22.0"/>
-                </font>
-            </Label>
-            <Label fx:id="combatModifierAttackPoint" layoutX="928" layoutY="1153" text="13">
-                <font>
-                    <Font name="System Bold" size="22.0"/>
-                </font>
-            </Label>
-            <Label fx:id="combatModifierDefensePoint" layoutX="975" layoutY="1153" text="14">
-                <font>
-                    <Font name="System Bold" size="22.0"/>
-                </font>
-            </Label>
-            <Label fx:id="combatModifierAimPoint" layoutX="1025" layoutY="1153" text="15">
-                <font>
-                    <Font name="System Bold" size="22.0"/>
-                </font>
-            </Label>
-            <Label fx:id="attackPerRound" layoutX="1080" layoutY="1153" text="1">
-                <font>
-                    <Font name="System Bold" size="22.0"/>
-                </font>
-            </Label>
-
         </Pane>
     </content>
 </ScrollPane>

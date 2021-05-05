@@ -22,7 +22,7 @@ public abstract class CharacterGenerator {
             cps.spendCharacterSpecPoints(Kap());
             sam.modifyAttribute(character.getAttributes(), character.getRace(), character.getAge());
             cpm.modifyCombatStats(character.getStatistics(), character.getAttributes());
-            hpm.modifyHealthAndPain(character.getHealthAndPainRes(), character.getAttributes(), character.getLevel());
+            hpm.modifyHealthAndPain(character.getHealthAndPainRes(), character.getAttributes());
 
         } catch (InvalidAttributeException e) {
             e.printStackTrace();
