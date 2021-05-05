@@ -1,5 +1,7 @@
 package magus.modifiers.attribmods;
 
+import magus.exceptions.InvalidAttributeException;
+import magus.model.Attributes;
 import magus.model.Race;
 
 public class SummarizedAttributeModifiers {
@@ -72,4 +74,16 @@ public class SummarizedAttributeModifiers {
     //will has no modifiers just coming from the dice roll
 
     //endregion
+
+    public void modifyAttribute(Attributes atr, Race race, int age) throws InvalidAttributeException {
+        atr.setStrength( atr.getStrength() + StrengthModifier(race, age) );
+        atr.setDexterity( atr.getDexterity() + DexterityModifier(race, age) );
+        atr.setQuickness( atr.getQuickness() + QuicknessModifier(race, age) );
+        atr.setEndurance( atr.getEndurance() + EnduranceModifier(race, age) );
+        atr.setHealth( atr.getHealth() + HealthModifier(race, age) );
+        atr.setBeauty( atr.getBeauty() + BeautyModifier(race, age) );
+        atr.setIntelligence( atr.getIntelligence() + IntelligenceModifier(race) );
+        atr.setAstral( atr.getAstral() + AstralModifier(race) );
+        atr.setPerception( atr.getPerception() + PerceptionModifier(race) );
+    }
 }

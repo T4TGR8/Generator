@@ -1,5 +1,8 @@
 package magus.modifiers.healthstatmods;
 
+import magus.model.Attributes;
+import magus.model.HealthAndPainRes;
+
 public class HpAndRpModifiers {
 
     //region These functions are adding the life and pain resistance point modifiers which is coming from attributes
@@ -19,4 +22,14 @@ public class HpAndRpModifiers {
     }
 
     //endregion
+
+    public void modifyHealthAndPain(HealthAndPainRes hpr, Attributes atr){
+
+        int health = atr.getHealth();
+        int end = atr.getEndurance();
+        int will = atr.getWill();
+
+        hpr.setBaseHealthPoints(hpr.getBaseHealthPoints() + HealthPointModifier(health));
+        hpr.setBasePainResistancePoints(hpr.getBasePainResistancePoints() + ResistancePointModifier(end, will));
+    }
 }

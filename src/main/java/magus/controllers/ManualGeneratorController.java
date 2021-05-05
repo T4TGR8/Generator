@@ -299,7 +299,6 @@ public class ManualGeneratorController implements Initializable {
         controller.setManualCharacter(character);
 
         Scene scene = new Scene(root, 1210, 800);
-        scene.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
         window.setScene(scene);
     }
 

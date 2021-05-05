@@ -1,82 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="magus.controllers.QuickGeneratorController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0"
+      prefWidth="360.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="magus.controllers.QuickGeneratorController">
 
     <children>
-        <Button fx:id="buttonGenerate" layoutX="198.0" layoutY="467.0" mnemonicParsing="false" onAction="#generateAction" prefHeight="25.0" prefWidth="74.0" text="Generálás" />
-        <Label layoutX="40.0" layoutY="50.0" text="Karakter neve">
+        <Button fx:id="buttonGenerate" layoutX="198.0" layoutY="509.0" mnemonicParsing="false"
+                onAction="#generateAction" prefHeight="25.0" prefWidth="74.0" text="Generálás"/>
+        <Label layoutX="36.0" layoutY="51.0" text="Karakter neve">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="95.0" text="Kaszt">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="140.0" text="Faj">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="185.0" text="Nem">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <Label layoutX="40.0" layoutY="230.0" text="Jellem">
+        <Label layoutX="40.0" layoutY="280.0" text="Jellem">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <Label layoutX="40.0" layoutY="275.0" text="Vallás">
+        <Label layoutX="40.0" layoutY="325.0" text="Vallás">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <Label layoutX="40.0" layoutY="320.0" text="Szülőföld">
+        <Label layoutX="40.0" layoutY="370.0" text="Szülőföld">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <Label layoutX="40.0" layoutY="365.0" text="Iskola">
+        <Label layoutX="40.0" layoutY="410.0" text="Iskola">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <Label layoutX="40.0" layoutY="410.0" text="Szint">
+        <Label layoutX="40.0" layoutY="450.0" text="Szint">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <ChoiceBox fx:id="choiceBoxCaste" layoutX="160.0" layoutY="93.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="choiceBoxRace" layoutX="160.0" layoutY="138.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="choiceBoxCaste" layoutX="160.0" layoutY="93.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="choiceBoxRace" layoutX="160.0" layoutY="138.0" prefWidth="150.0"/>
 
         <RadioButton layoutX="160.0" layoutY="185.0" mnemonicParsing="false" text="Férfi" toggleGroup="$Sex">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
             <toggleGroup>
-                <ToggleGroup fx:id="Sex" />
+                <ToggleGroup fx:id="Sex"/>
             </toggleGroup>
         </RadioButton>
         <RadioButton layoutX="234.0" layoutY="185.0" mnemonicParsing="false" text="Nő" toggleGroup="$Sex">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </RadioButton>
 
-        <TextField fx:id="textField_characterName" layoutX="160.0" layoutY="48.0" />
-        <ChoiceBox fx:id="choiceBoxPersonality" layoutX="160.0" layoutY="218.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="choiceBoxReligion" layoutX="160.0" layoutY="273.0" prefWidth="150.0" />
-        <TextField fx:id="textField_characterBirthplace" layoutX="160.0" layoutY="318.0" />
-        <TextField fx:id="textField_characterSchool" layoutX="160.0" layoutY="363.0" />
-        <Spinner fx:id="spinnerLevel" layoutX="160.0" layoutY="408.0" />
-      <Button layoutX="72.0" layoutY="467.0" mnemonicParsing="false" text="Vissza" fx:id="buttonBack" onAction="#backButtonAction"/>
+        <TextField fx:id="textField_characterName" layoutX="160.0" layoutY="48.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="choiceBoxPersonality" layoutX="160.0" layoutY="275.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="choiceBoxReligion" layoutX="160.0" layoutY="320.0" prefWidth="150.0"/>
+        <TextField fx:id="textField_characterBirthplace" layoutX="160.0" layoutY="365.0" prefWidth="150.0"/>
+        <TextField fx:id="textField_characterSchool" layoutX="160.0" layoutY="410.0" prefWidth="150.0"/>
+        <Spinner fx:id="spinnerAge" layoutX="160.0" layoutY="230.0" prefWidth="150.0"/>
+        <Button fx:id="buttonBack" layoutX="73.0" layoutY="509.0" mnemonicParsing="false" onAction="#backButtonAction"
+                text="Vissza"/>
+        <Label layoutX="40.0" layoutY="235.0" text="Kor">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Spinner fx:id="spinnerLevel" layoutX="160.0" layoutY="450.0" prefWidth="150.0"/>
 
     </children>
 </Pane>

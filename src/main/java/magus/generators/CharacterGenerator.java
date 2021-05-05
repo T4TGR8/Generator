@@ -2,10 +2,16 @@ package magus.generators;
 
 import magus.exceptions.InvalidAttributeException;
 import magus.model.Character;
+import magus.modifiers.attribmods.SummarizedAttributeModifiers;
+import magus.modifiers.combatstatmods.CombatPointModifiers;
+import magus.modifiers.healthstatmods.HpAndRpModifiers;
 
 public abstract class CharacterGenerator {
 
     private CharacterPointSpenders cps;
+    private SummarizedAttributeModifiers sam;
+    private CombatPointModifiers cpm;
+    private HpAndRpModifiers hpm;
 
     Character character;
 
@@ -14,6 +20,9 @@ public abstract class CharacterGenerator {
 
             spendBasePoints();
             cps.spendCharacterSpecPoints(Kap());
+            sam.modifyAttribute(character.getAttributes(), character.getRace(), character.getAge());
+            cpm.modifyCombatStats(character.getStatistics(), character.getAttributes());
+            hpm.modifyHealthAndPain(character.getHealthAndPainRes(), character.getAttributes());
 
         } catch (InvalidAttributeException e) {
             e.printStackTrace();
@@ -29,7 +38,11 @@ public abstract class CharacterGenerator {
     public CharacterGenerator(Character character) {
         this.character = character;
         cps = new CharacterPointSpenders(character);
+        sam = new SummarizedAttributeModifiers();
+        cpm = new CombatPointModifiers();
+        hpm = new HpAndRpModifiers();
     }
 
     public abstract int Kap();
+
 }

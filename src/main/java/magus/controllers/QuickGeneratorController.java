@@ -1,5 +1,7 @@
 package magus.controllers;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,6 +36,8 @@ public class QuickGeneratorController implements Initializable {
     @FXML
     private Spinner<Integer> spinnerLevel;
     @FXML
+    private Spinner<Integer> spinnerAge;
+    @FXML
     private Button buttonGenerate;
     @FXML
     private Button buttonBack;
@@ -57,6 +61,18 @@ public class QuickGeneratorController implements Initializable {
         spinnerLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1));
         spinnerLevel.setEditable(true);
 
+        choiceBoxRace.valueProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (t1 == null) spinnerAge.setEditable(false);
+
+                else {
+                    setAgeSpinnerBoundValues(t1);
+                    spinnerAge.setEditable(true);
+                }
+            }
+        });
+
         character = new Character();
     }
 
@@ -74,7 +90,6 @@ public class QuickGeneratorController implements Initializable {
         controller.setCharacter(character);
 
         Scene scene = new Scene(root, 1210, 800);
-        scene.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
         window.setScene(scene);
     }
 
@@ -99,6 +114,41 @@ public class QuickGeneratorController implements Initializable {
         character.setBirthplace(textField_characterBirthplace.getText());
         character.setSchool(textField_characterSchool.getText());
         character.setLevel(spinnerLevel.getValue());
+        character.setAge(spinnerAge.getValue());
+    }
+
+    private void setAgeSpinnerBoundValues(String sRace) {
+
+        Race race = Race.getRaceByString(sRace);
+
+        switch (race) {
+            case DWARF:
+                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(25, 760, 1));
+                break;
+
+            case ORC:
+            case KHAAL:
+                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(12, 65, 1));
+                break;
+
+            case ELF:
+                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(30, 2000, 1));
+                break;
+
+            case HALF_ELF:
+            case GNOME:
+                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(16, 200, 1));
+                break;
+
+            case DZSENN:
+                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(19, 240, 1));
+                break;
+
+
+            default:
+                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(13, 80, 1));
+                break;
+        }
     }
 
 }
