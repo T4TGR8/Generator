@@ -10,10 +10,10 @@ import magus.model.Attributes;
 import magus.model.Character;
 import magus.model.CombatStatistics;
 import magus.model.HealthAndPainRes;
-import magus.model.Skills;
+import magus.modifiers.combatstatmods.CombatPointModifiers;
+import magus.modifiers.healthstatmods.HpAndRpModifiers;
 
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class CharacterSheetController implements Initializable {
@@ -40,9 +40,15 @@ public class CharacterSheetController implements Initializable {
     @FXML
     private Label labelStrength;
     @FXML
+    private Label labelExtraDamage;
+    @FXML
     private Label labelQuickness;
     @FXML
+    private Label labelQuicknessInArmor;
+    @FXML
     private Label labelDexterity;
+    @FXML
+    private Label labelDexterityInArmor;
     @FXML
     private Label labelEndurance;
     @FXML
@@ -58,29 +64,67 @@ public class CharacterSheetController implements Initializable {
     @FXML
     private Label labelPerception;
 
+
     @FXML
     private Label baseInitiativePoint;
     @FXML
+    private Label combatModifierIni;
+    @FXML
+    private Label initiativePointWithoutWep;
+    @FXML
     private Label baseAttackPoint;
+    @FXML
+    private Label combatModifierAp;
+    @FXML
+    private Label attackPointWithoutWep;
     @FXML
     private Label baseDefencePoint;
     @FXML
+    private Label combatModifierDef;
+    @FXML
+    private Label defencePointWithoutWep;
+    @FXML
     private Label baseAimPoint;
+    @FXML
+    private Label combatModifierAim;
+    @FXML
+    private Label aimPointWithoutWep;
+
+    @FXML
+    private Label initiativePointModifier;
+    @FXML
+    private Label attackPointModifier;
+    @FXML
+    private Label defencePointModifier;
+    @FXML
+    private Label aimPointModifier;
+
 
     @FXML
     private Label baseHealth;
     @FXML
+    private Label maxHealth;
+    @FXML
     private Label basePain;
     @FXML
+    private Label maxPain;
+    @FXML
     private Label PainResPerLevel;
-    /*
     @FXML
-    private Label labelPerception;
+    private Label XpPerPainResPoint;
+
+
     @FXML
-    private Label labelPerception;
+    private Label combatModifierPerLevel;
     @FXML
-    private Label labelPerception;
-    */
+    private Label combatModifierInitiativePoint;
+    @FXML
+    private Label combatModifierAttackPoint;
+    @FXML
+    private Label combatModifierDefensePoint;
+    @FXML
+    private Label combatModifierAimPoint;
+
 
     private Character character;
     private CharacterGenerator gen;
@@ -108,6 +152,16 @@ public class CharacterSheetController implements Initializable {
     }
 
     private void setLabels() {
+        CombatPointModifiers cpm = new CombatPointModifiers();
+        HpAndRpModifiers hpm = new HpAndRpModifiers();
+
+        Attributes atr = character.getAttributes();
+        CombatStatistics stat = character.getStatistics();
+        HealthAndPainRes HPR = character.getHealthAndPainRes();
+
+        int[] allModifiers = cpm.combatModifierSpender(stat.getCombatModifierPerLevel(), character.getCaste());
+
+
         labelName.setText(character.getName());
         labelCaste.setText(character.getCaste().getCasteName());
         labelRace.setText(character.getRace().getRaceString());
@@ -117,10 +171,13 @@ public class CharacterSheetController implements Initializable {
         labelSchool.setText(character.getSchool());
         labelLevel.setText(String.valueOf(character.getLevel()));
 
-        Attributes atr = character.getAttributes();
+
         labelStrength.setText(String.valueOf(atr.getStrength()));
+        labelExtraDamage.setText(String.valueOf(cpm.DamageModifier(character.getAttributes().getStrength())));
         labelQuickness.setText(String.valueOf(atr.getQuickness()));
+        labelQuicknessInArmor.setText(String.valueOf(atr.getQuickness()));
         labelDexterity.setText(String.valueOf(atr.getDexterity()));
+        labelDexterityInArmor.setText(String.valueOf(atr.getDexterity()));
         labelEndurance.setText(String.valueOf(atr.getEndurance()));
         labelHealth.setText(String.valueOf(atr.getHealth()));
         labelBeauty.setText(String.valueOf(atr.getBeauty()));
@@ -129,21 +186,56 @@ public class CharacterSheetController implements Initializable {
         labelAstral.setText(String.valueOf(atr.getAstral()));
         labelPerception.setText(String.valueOf(atr.getPerception()));
 
-        CombatStatistics stat = character.getStatistics();
+
         baseInitiativePoint.setText(String.valueOf(stat.getBaseInitiativePoints()));
         baseAttackPoint.setText(String.valueOf(stat.getBaseAttackPoints()));
         baseDefencePoint.setText(String.valueOf(stat.getBaseDefensePoints()));
         baseAimPoint.setText(String.valueOf(stat.getBaseAimingPoints()));
 
-        HealthAndPainRes HPR = character.getHealthAndPainRes();
+        int initMod = (cpm.InitiativePointModifiers(atr.getDexterity(), atr.getQuickness()));
+        initiativePointModifier.setText(String.valueOf(initMod));
+        initiativePointWithoutWep.setText(String.valueOf(stat.getInitiativePoints() +
+                allModifiers[0] * character.getLevel()));
+
+        int apMod = cpm.AttackPointModifiers(atr.getStrength(), atr.getDexterity(), atr.getQuickness());
+        attackPointModifier.setText(String.valueOf(apMod));
+        attackPointWithoutWep.setText(String.valueOf(stat.getAttackPoints() +
+                allModifiers[1] * character.getLevel()));
+
+        int defMod = cpm.DefendPointModifiers(atr.getDexterity(), atr.getQuickness());
+        defencePointModifier.setText(String.valueOf(defMod));
+        defencePointWithoutWep.setText(String.valueOf(stat.getDefensePoints() +
+                allModifiers[2] * character.getLevel()));
+
+        int aimMod = cpm.AimingPointModifiers(atr.getDexterity());
+        aimPointModifier.setText(String.valueOf(aimMod));
+        aimPointWithoutWep.setText(String.valueOf(stat.getAimingPoints() +
+                allModifiers[3] * character.getLevel()));
+
+
         baseHealth.setText(String.valueOf(HPR.getBaseHealthPoints()));
+        maxHealth.setText(String.valueOf(HPR.getMaxHealthPoints()));
         basePain.setText(String.valueOf(HPR.getBasePainResistancePoints()));
+        maxPain.setText(String.valueOf(HPR.getMaxPainResistancePoints()));
         PainResPerLevel.setText(String.valueOf(HPR.getPainResistancePointsPerLevel()));
+        XpPerPainResPoint.setText(String.valueOf(hpm.painResistancePontForXP(character.getCaste())));
+
+
+        combatModifierPerLevel.setText(String.valueOf(stat.getCombatModifierPerLevel()));
+        combatModifierInitiativePoint.setText(String.valueOf(allModifiers[0]));
+        combatModifierAttackPoint.setText(String.valueOf(allModifiers[1]));
+        combatModifierDefensePoint.setText(String.valueOf(allModifiers[2]));
+        combatModifierAimPoint.setText(String.valueOf(allModifiers[3]));
+
+        combatModifierIni.setText(String.valueOf(allModifiers[0] * character.getLevel()));
+        combatModifierAp.setText(String.valueOf(allModifiers[1] * character.getLevel()));
+        combatModifierDef.setText(String.valueOf(allModifiers[2] * character.getLevel()));
+        combatModifierAim.setText(String.valueOf(allModifiers[3] * character.getLevel()));
     }
 
-    private void generateCharacterFromCaste(){
+    private void generateCharacterFromCaste() {
 
-        switch (character.getCaste()){
+        switch (character.getCaste()) {
             case WARRIOR:
                 gen = new WarriorGen(character);
                 gen.spendCharacterCreationPoints();
