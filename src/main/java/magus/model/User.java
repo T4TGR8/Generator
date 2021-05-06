@@ -10,6 +10,8 @@ public class User {
     private String name;
     private String password;
 
+    User user;
+
     private Set<Character> characters;
 
     public int getId() {
@@ -36,6 +38,10 @@ public class User {
        // this.password = Encryption.getMd5(password);
          this.password = password + "#";
     }
+
+    public User getUser(){return user;}
+
+    public void setUser(User user){this.user = user;}
 
     public Set<Character> getCharacters() {
         return characters;

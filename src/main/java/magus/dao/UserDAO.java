@@ -1,6 +1,7 @@
 package magus.dao;
 
 import magus.Encryption;
+import magus.exceptions.NoCharactersException;
 import magus.exceptions.UserAlredyExistException;
 import magus.exceptions.WrongUserNameOrPasswordException;
 import magus.model.User;
@@ -28,7 +29,7 @@ public class UserDAO {
             session.save(user);
             transaction.commit();
 
-        } catch (ConstraintViolationException e) {
+        } catch (Exception e) {
             throw new UserAlredyExistException();
 
         } finally {
@@ -36,7 +37,26 @@ public class UserDAO {
         }
     }
 
-    public User readUser(String name, String password) throws WrongUserNameOrPasswordException {
+    public User loginUser(String name, String password) throws WrongUserNameOrPasswordException {
+        Session session = factory.openSession();
+        session.beginTransaction();
+
+        Query query = session.createQuery("FROM User u JOIN FETCH u.user WHERE u.name = :name AND u.password = :pw");
+        query.setParameter("name", name);
+        query.setParameter("pw", password);
+
+        ArrayList<User> users = (ArrayList<User>) query.list();
+
+
+        session.close();
+
+        if (users.size() != 0) {
+            return users.get(0);
+        }
+        throw new WrongUserNameOrPasswordException();
+    }
+
+    public User readUser(String name, String password) throws NoCharactersException {
         Session session = factory.openSession();
         session.beginTransaction();
 
@@ -51,7 +71,7 @@ public class UserDAO {
         if (users.size() != 0) {
             return users.get(0);
         }
-        throw new WrongUserNameOrPasswordException();
+        throw new NoCharactersException();
     }
 }
 

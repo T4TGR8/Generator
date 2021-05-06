@@ -33,7 +33,7 @@ public class LoginController {
     @FXML
     public void bt_LoginPressed() throws IOException, WrongUserNameOrPasswordException {
 
-        UD.readUser(tb_Username.getText(), tb_Password.getText());
+        UD.loginUser(tb_Username.getText(), tb_Password.getText());
 
         Stage window = (Stage) bt_Login.getScene().getWindow();
 

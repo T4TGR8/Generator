@@ -7,6 +7,8 @@
         <property name="name" type="java.lang.String" column="name" unique="true"/>
         <property name="password" type="java.lang.String" column="password"/>
 
+        <one-to-one name="user" class="magus.model.User" cascade="all"/>
+
         <set name="characters" inverse="true"
              lazy="true" fetch="select" cascade="all">
             <key column="user_id" not-null="true" />
