@@ -1,15 +1,19 @@
 package magus.model;
 
 import magus.dao.CharacterDAO;
+import magus.dao.UserDAO;
 import magus.exceptions.InvalidAttributeException;
+import magus.exceptions.WrongUserNameOrPasswordException;
 import org.junit.Test;
 
 public class CharacterDAOTest {
 
     CharacterDAO dao = new CharacterDAO();
+    UserDAO userDAO = new UserDAO();
 
     @Test
-    public void testCharacterOneToOne() throws InvalidAttributeException {
+    public void testCharacterOneToOne() throws InvalidAttributeException, WrongUserNameOrPasswordException {
+        User user = userDAO.loginUser("newUser", "111##");
         Character c = new Character();
         c.setName("Micsu");
 
@@ -34,6 +38,7 @@ public class CharacterDAOTest {
         c.setSkills(s);
         c.setStatistics(st);
         c.setPsy(p);
+        c.setUser(user);
 
         a.setCharacter(c);
         hp.setCharacter(c);
