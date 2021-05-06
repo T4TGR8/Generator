@@ -2,10 +2,12 @@ package magus.dao;
 
 import magus.Encryption;
 import magus.exceptions.InvalidAttributeException;
+import magus.exceptions.NoCharactersException;
 import magus.exceptions.UserAlredyExistException;
 import magus.exceptions.WrongUserNameOrPasswordException;
 import magus.model.*;
 import magus.model.Character;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -18,7 +20,27 @@ public class UserDAOTest {
         dao.createUser(new User("TestUser2", "1234"));
     }
 
+    @Test(expected = WrongUserNameOrPasswordException.class)
+    public void testLoginNotExistingUser() throws WrongUserNameOrPasswordException {
+        dao.loginUser("TestUser4", "1234##");
+    }
+
     @Test
+    public void testLoginUser() throws WrongUserNameOrPasswordException {
+        dao.loginUser("TestUser3", "1234##");
+    }
+
+    @Test
+    public void testReadUser() throws NoCharactersException {
+        dao.readUser("Micsu", "123456##");
+    }
+
+    @Test(expected = NoCharactersException.class)
+    public  void testReadUserWithoutCharacters() throws NoCharactersException{
+        dao.readUser("TestUser2", "1234##");
+    }
+
+    /*@Test
     public void testUserOneToManyCharacters() throws UserAlredyExistException {
 
         User user = new User();
@@ -115,15 +137,15 @@ public class UserDAOTest {
         character.setHealthAndPainRes(hpRes);
 
         dao.createUser(user);
-    }
+    }*/
 
     @Test
-    public void testSelectUser(){
+    public void testSelectUser() throws NoCharactersException{
 
         User user = null;
         try {
             user = dao.readUser("user", "jelszó##");
-        } catch (WrongUserNameOrPasswordException e) {
+        } catch (NoCharactersException e) {
             e.printStackTrace();
         }
 
