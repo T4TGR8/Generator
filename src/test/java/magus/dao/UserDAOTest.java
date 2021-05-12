@@ -40,7 +40,7 @@ public class UserDAOTest {
         dao.readUser("TestUser2", "1234##");
     }
 
-    /*@Test
+    @Test
     public void testUserOneToManyCharacters() throws UserAlredyExistException {
 
         User user = new User();
@@ -137,7 +137,7 @@ public class UserDAOTest {
         character.setHealthAndPainRes(hpRes);
 
         dao.createUser(user);
-    }*/
+    }
 
     @Test
     public void testSelectUser() throws NoCharactersException{

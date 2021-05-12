@@ -1,6 +1,5 @@
 package magus.dao;
 
-import magus.Encryption;
 import magus.exceptions.NoCharactersException;
 import magus.exceptions.UserAlredyExistException;
 import magus.exceptions.WrongUserNameOrPasswordException;
@@ -9,7 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;

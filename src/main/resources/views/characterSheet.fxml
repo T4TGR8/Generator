@@ -320,6 +320,93 @@
                 </font>
             </Label>
 
+
+            <!-- Pszi értékek -->
+
+            <Label fx:id="psySchoolType" layoutX="205" layoutY="815" text="asdfg">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="psyUsageGrade" layoutX="225" layoutY="845" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="psyUsageLevel" layoutX="240" layoutY="880" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="basePsyPoint" layoutX="135" layoutY="928" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="maxPsyPointPerLevel" layoutX="165" layoutY="965" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="psyPointPerLevel" layoutX="310" layoutY="928" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="xpPerPsyPoint" layoutX="300" layoutY="965" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="psyPoints" layoutX="215" layoutY="1015" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- Pszi pajzsok -->
+
+            <Label fx:id="staticAstralMagicShield" layoutX="120" layoutY="1155" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="staticMentalMagicShield" layoutX="325" layoutY="1155" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="dynamicAstralMagicShield" layoutX="120" layoutY="1192" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="dynamicMentalMagicShield" layoutX="325" layoutY="1192" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="miscAstralMagicShield" layoutX="120" layoutY="1227" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="miscMentalMagicShield" layoutX="325" layoutY="1227" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="astralMagicShield" layoutX="120" layoutY="1275" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="mentalMagicShield" layoutX="325" layoutY="1275" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
         </Pane>
     </content>
 </ScrollPane>

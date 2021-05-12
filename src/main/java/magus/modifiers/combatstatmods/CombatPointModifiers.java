@@ -89,7 +89,7 @@ public class CombatPointModifiers {
                 if (isMelee)
                     return meleeModifiers(combatModifier);
                 else
-                    return archerModifier(combatModifier);
+                    return rangerModifier(combatModifier);
 
             default:
                 return new int[]{0, 0, 0, 0};
@@ -147,7 +147,7 @@ public class CombatPointModifiers {
 
     }
 
-    private int[] archerModifier(int combatModifier) {
+    private int[] rangerModifier(int combatModifier) {
         switch (combatModifier) {
 
             case 3:

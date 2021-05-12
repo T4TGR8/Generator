@@ -12,6 +12,7 @@ public abstract class CharacterGenerator {
     private SummarizedAttributeModifiers sam;
     private CombatPointModifiers cpm;
     private HpAndRpModifiers hpm;
+    private PsyRelatedFunctions prf;
 
     Character character;
 
@@ -23,6 +24,7 @@ public abstract class CharacterGenerator {
             sam.modifyAttribute(character.getAttributes(), character.getRace(), character.getAge());
             cpm.modifyCombatStats(character.getStatistics(), character.getAttributes());
             hpm.modifyHealthAndPain(character.getHealthAndPainRes(), character.getAttributes(), character.getLevel());
+            prf.modifyPsy();
 
         } catch (InvalidAttributeException e) {
             e.printStackTrace();
@@ -41,6 +43,7 @@ public abstract class CharacterGenerator {
         sam = new SummarizedAttributeModifiers();
         cpm = new CombatPointModifiers();
         hpm = new HpAndRpModifiers();
+        prf = new PsyRelatedFunctions(character);
     }
 
     public abstract int Kap();

@@ -6,10 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import magus.generators.*;
-import magus.model.Attributes;
+import magus.model.*;
 import magus.model.Character;
-import magus.model.CombatStatistics;
-import magus.model.HealthAndPainRes;
 import magus.modifiers.combatstatmods.CombatPointModifiers;
 import magus.modifiers.healthstatmods.HpAndRpModifiers;
 
@@ -126,6 +124,42 @@ public class CharacterSheetController implements Initializable {
     private Label combatModifierAimPoint;
 
 
+    @FXML
+    private Label psySchoolType;
+    @FXML
+    private Label psyUsageGrade;
+    @FXML
+    private Label psyUsageLevel;
+    @FXML
+    private Label basePsyPoint;
+    @FXML
+    private Label maxPsyPointPerLevel;
+    @FXML
+    private Label psyPointPerLevel;
+    @FXML
+    private Label xpPerPsyPoint;
+    @FXML
+    private Label psyPoints;
+
+
+    @FXML
+    private Label staticAstralMagicShield;
+    @FXML
+    private Label staticMentalMagicShield;
+    @FXML
+    private Label dynamicAstralMagicShield;
+    @FXML
+    private Label dynamicMentalMagicShield;
+    @FXML
+    private Label miscAstralMagicShield;
+    @FXML
+    private Label miscMentalMagicShield;
+    @FXML
+    private Label astralMagicShield;
+    @FXML
+    private Label mentalMagicShield;
+
+
     private Character character;
     private CharacterGenerator gen;
 
@@ -158,6 +192,7 @@ public class CharacterSheetController implements Initializable {
         Attributes atr = character.getAttributes();
         CombatStatistics stat = character.getStatistics();
         HealthAndPainRes HPR = character.getHealthAndPainRes();
+        Psy psy = character.getPsy();
 
         int[] allModifiers = cpm.combatModifierSpender(stat.getCombatModifierPerLevel(), character.getCaste());
 
@@ -231,6 +266,26 @@ public class CharacterSheetController implements Initializable {
         combatModifierAp.setText(String.valueOf(allModifiers[1] * character.getLevel()));
         combatModifierDef.setText(String.valueOf(allModifiers[2] * character.getLevel()));
         combatModifierAim.setText(String.valueOf(allModifiers[3] * character.getLevel()));
+
+
+        psySchoolType.setText(psy.getPsySchool().name().toLowerCase());
+        psyUsageLevel.setText(String.valueOf(psy.getUsageLevel()));
+        psyUsageGrade.setText(String.valueOf(psy.getUsageGrade()));
+        basePsyPoint.setText(String.valueOf(psy.getBasePsyPoint()));
+        psyPointPerLevel.setText(String.valueOf(psy.getPsyPointPerLevel()));
+        maxPsyPointPerLevel.setText(String.valueOf(psy.getMaxPsyPointPerLevel()));
+        xpPerPsyPoint.setText(String.valueOf(psy.getXpPerPsyPoint()));
+        psyPoints.setText(String.valueOf(psy.getPsyPoints()));
+
+
+        staticAstralMagicShield.setText(String.valueOf(psy.getStaticAstralMagicShield()));
+        staticMentalMagicShield.setText(String.valueOf(psy.getStaticMentalMagicShield()));
+        dynamicAstralMagicShield.setText(String.valueOf(psy.getDynamicAstralMagicShield()));
+        dynamicMentalMagicShield.setText(String.valueOf(psy.getDynamicMentalMagicShield()));
+        miscAstralMagicShield.setText(String.valueOf(psy.getMiscAstralMagicShield()));
+        miscMentalMagicShield.setText(String.valueOf(psy.getMiscMentalMagicShield()));
+        astralMagicShield.setText(String.valueOf(psy.getAstralMagicShield()));
+        mentalMagicShield.setText(String.valueOf(psy.getMentalMagicShield()));
     }
 
     private void generateCharacterFromCaste() {

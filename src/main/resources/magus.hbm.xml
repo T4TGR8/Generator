@@ -145,9 +145,20 @@
                 <param name="useNamed">true</param>
             </type>
         </property>
-        <property name="usageGrade" type="java.lang.Integer" column="usageGrade"/>
         <property name="usageLevel" type="java.lang.Integer" column="usageLevel"/>
+        <property name="usageGrade" type="java.lang.Integer" column="usageGrade"/>
+        <property name="basePsyPoint" type="java.lang.Integer" column="basePsyPoint"/>
+        <property name="psyPointPerLevel" type="java.lang.Integer" column="psyPointPerLevel"/>
+        <property name="maxPsyPointPerLevel" type="java.lang.Integer" column="maxPsyPointPerLevel"/>
+        <property name="xpPerPsyPoint" type="java.lang.Integer" column="xpPerPsyPoint"/>
         <property name="psyPoints" type="java.lang.Integer" column="psyPoints"/>
+
+        <property name="staticAstralMagicShield" type="java.lang.Integer" column="staticAstralMagicShield"/>
+        <property name="staticMentalMagicShield" type="java.lang.Integer" column="staticMentalMagicShield"/>
+        <property name="dynamicAstralMagicShield" type="java.lang.Integer" column="dynamicAstralMagicShield"/>
+        <property name="dynamicMentalMagicShield" type="java.lang.Integer" column="dynamicMentalMagicShield"/>
+        <property name="miscAstralMagicShield" type="java.lang.Integer" column="miscAstralMagicShield"/>
+        <property name="miscMentalMagicShield" type="java.lang.Integer" column="miscMentalMagicShield"/>
         <property name="mentalMagicShield" type="java.lang.Integer" column="mentalMagisShield"/>
         <property name="astralMagicShield" type="java.lang.Integer" column="astralMagicShield"/>
 
