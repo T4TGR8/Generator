@@ -49,4 +49,6 @@ public class CharacterDAOTest {
         dao.createCharacter(c);
     }
 
+
+
 }

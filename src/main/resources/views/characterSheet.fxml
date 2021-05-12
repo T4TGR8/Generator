@@ -320,7 +320,6 @@
                 </font>
             </Label>
 
-
             <!-- Pszi értékek -->
 
             <Label fx:id="psySchoolType" layoutX="205" layoutY="815" text="asdfg">
@@ -402,6 +401,19 @@
                 </font>
             </Label>
             <Label fx:id="mentalMagicShield" layoutX="325" layoutY="1275" text="-1">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+
+            <!-- Tapasztalati Pont -->
+
+            <Label fx:id="actualXp" layoutX="620" layoutY="1207" text="-1111">
+                <font>
+                    <Font name="System Bold" size="22.0"/>
+                </font>
+            </Label>
+            <Label fx:id="xpForNextLevel" layoutX="620" layoutY="1258" text="-1111">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>

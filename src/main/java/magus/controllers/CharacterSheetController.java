@@ -160,6 +160,12 @@ public class CharacterSheetController implements Initializable {
     private Label mentalMagicShield;
 
 
+    @FXML
+    private Label actualXp;
+    @FXML
+    private Label xpForNextLevel;
+
+
     private Character character;
     private CharacterGenerator gen;
 

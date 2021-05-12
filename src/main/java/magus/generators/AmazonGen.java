@@ -46,6 +46,7 @@ public class AmazonGen extends CharacterGenerator {
 
         skills.setBaseSkillPoints(3);
         skills.setSkillPointsPerLevel(3);
+
     }
 
 }

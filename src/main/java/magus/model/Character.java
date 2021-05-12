@@ -14,6 +14,7 @@ public class Character {
     String school;
     int level;
     int experiencePoint;
+    int xpForNextLevel;
 
     User user;
 
@@ -117,6 +118,14 @@ public class Character {
 
     public void setExperiencePoint(int experience_point) {
         this.experiencePoint = experience_point;
+    }
+
+    public int getXpForNextLevel() {
+        return xpForNextLevel;
+    }
+
+    public void setXpForNextLevel(int xpForNextLevel) {
+        this.xpForNextLevel = xpForNextLevel;
     }
 
     public Attributes getAttributes() {

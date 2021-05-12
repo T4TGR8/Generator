@@ -59,6 +59,7 @@
         </property>
         <property name="level" type="java.lang.Integer" column="level"/>
         <property name="experiencePoint" type="java.lang.Integer" column="experiencePoints"/>
+        <property name="xpForNextLevel" type="java.lang.Integer" column="xpForNextLevel"/>
 
         <many-to-one name="user" class="magus.model.User" column="user_id" not-null="true"/>
 
