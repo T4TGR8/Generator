@@ -292,6 +292,10 @@ public class CharacterSheetController implements Initializable {
         miscMentalMagicShield.setText(String.valueOf(psy.getMiscMentalMagicShield()));
         astralMagicShield.setText(String.valueOf(psy.getAstralMagicShield()));
         mentalMagicShield.setText(String.valueOf(psy.getMentalMagicShield()));
+
+
+        actualXp.setText(String.valueOf(character.getExperiencePoint()));
+        xpForNextLevel.setText(String.valueOf(character.getXpForNextLevel()));
     }
 
     private void generateCharacterFromCaste() {

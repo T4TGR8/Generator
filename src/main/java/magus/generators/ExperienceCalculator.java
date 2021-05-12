@@ -11,7 +11,10 @@ public class ExperienceCalculator {
         this.character = character;
     }
 
-    public void calculateXP(Caste caste, int level) {
+    public void calculateXP() {
+        Caste caste = character.getCaste();
+        int level = character.getLevel();
+
         switch (caste) {
             case WARRIOR:
                 warriorXP(level);
@@ -29,8 +32,10 @@ public class ExperienceCalculator {
                 AmazonXP(level);
                 break;
             case BARBARIAN:
-                break;
+                BarbarianXP(level);
+            break;
             case DUELER:
+                DuelerXP(level);
                 break;
             case THIEF:
                 ThiefXP(level);
@@ -52,17 +57,20 @@ public class ExperienceCalculator {
                 SwordArtistXP(level);
                 break;
             case WITCH:
+                WitchXP(level);
                 break;
             case WITCH_MASTER:
+                WitchMasterXP(level);
                 break;
             case ILLUSIONIST:
             case FIRE_MAGE:
+                FireMageXP(level);
                 break;
             case WIZARD:
+                WizardXP(level);
                 break;
         }
     }
-
 
 
     private void warriorXP(int level) {
@@ -298,7 +306,177 @@ public class ExperienceCalculator {
     }
 
     private void AmazonXP(int level) {
-        // ???
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(186);
+                break;
+            case 2:
+                character.setExperiencePoint(186);
+                character.setXpForNextLevel(187);
+                break;
+            case 3:
+                character.setExperiencePoint(373);
+                character.setXpForNextLevel(372);
+                break;
+            case 4:
+                character.setExperiencePoint(745);
+                character.setXpForNextLevel(744);
+                break;
+            case 5:
+                character.setExperiencePoint(1489);
+                character.setXpForNextLevel(1488);
+                break;
+            case 6:
+                character.setExperiencePoint(2977);
+                character.setXpForNextLevel(2976);
+                break;
+            case 7:
+                character.setExperiencePoint(5953);
+                character.setXpForNextLevel(5948);
+                break;
+            case 8:
+                character.setExperiencePoint(11901);
+                character.setXpForNextLevel(11900);
+                break;
+            case 9:
+                character.setExperiencePoint(23801);
+                character.setXpForNextLevel(23800);
+                break;
+            case 10:
+                character.setExperiencePoint(47601);
+                character.setXpForNextLevel(23800);
+                break;
+            case 11:
+                character.setExperiencePoint(71401);
+                character.setXpForNextLevel(29600);
+                break;
+            case 12:
+                character.setExperiencePoint(101001);
+                character.setXpForNextLevel(50000);
+                break;
+
+            default:
+                character.setExperiencePoint(151001 + ((character.getLevel() - 13) * 40500));
+                character.setXpForNextLevel(40500);
+                break;
+        }
+    }
+
+    private void BarbarianXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(151);
+                break;
+            case 2:
+                character.setExperiencePoint(151);
+                character.setXpForNextLevel(160);
+                break;
+            case 3:
+                character.setExperiencePoint(311);
+                character.setXpForNextLevel(320);
+                break;
+            case 4:
+                character.setExperiencePoint(631);
+                character.setXpForNextLevel(670);
+                break;
+            case 5:
+                character.setExperiencePoint(1301);
+                character.setXpForNextLevel(1400);
+                break;
+            case 6:
+                character.setExperiencePoint(2701);
+                character.setXpForNextLevel(2700);
+                break;
+            case 7:
+                character.setExperiencePoint(5401);
+                character.setXpForNextLevel(5400);
+                break;
+            case 8:
+                character.setExperiencePoint(10801);
+                character.setXpForNextLevel(10800);
+                break;
+            case 9:
+                character.setExperiencePoint(21601);
+                character.setXpForNextLevel(20400);
+                break;
+            case 10:
+                character.setExperiencePoint(42001);
+                character.setXpForNextLevel(23000);
+                break;
+            case 11:
+                character.setExperiencePoint(65001);
+                character.setXpForNextLevel(25000);
+                break;
+            case 12:
+                character.setExperiencePoint(90001);
+                character.setXpForNextLevel(30000);
+                break;
+
+            default:
+                character.setExperiencePoint(120001 + ((character.getLevel() - 13) * 32500));
+                character.setXpForNextLevel(32500);
+                break;
+        }
+    }
+
+    private void DuelerXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(166);
+                break;
+            case 2:
+                character.setExperiencePoint(166);
+                character.setXpForNextLevel(160);
+                break;
+            case 3:
+                character.setExperiencePoint(331);
+                character.setXpForNextLevel(330);
+                break;
+            case 4:
+                character.setExperiencePoint(661);
+                character.setXpForNextLevel(825);
+                break;
+            case 5:
+                character.setExperiencePoint(1486);
+                character.setXpForNextLevel(1415);
+                break;
+            case 6:
+                character.setExperiencePoint(2901);
+                character.setXpForNextLevel(2900);
+                break;
+            case 7:
+                character.setExperiencePoint(5801);
+                character.setXpForNextLevel(5200);
+                break;
+            case 8:
+                character.setExperiencePoint(11001);
+                character.setXpForNextLevel(11000);
+                break;
+            case 9:
+                character.setExperiencePoint(22001);
+                character.setXpForNextLevel(23000);
+                break;
+            case 10:
+                character.setExperiencePoint(45001);
+                character.setXpForNextLevel(22000);
+                break;
+            case 11:
+                character.setExperiencePoint(67001);
+                character.setXpForNextLevel(23000);
+                break;
+            case 12:
+                character.setExperiencePoint(90001);
+                character.setXpForNextLevel(46000);
+                break;
+
+            default:
+                character.setExperiencePoint(136001 + ((character.getLevel() - 13) * 40000));
+                character.setXpForNextLevel(40000);
+                break;
+        }
     }
 
     private void ThiefXP(int level) {
@@ -645,6 +823,238 @@ public class ExperienceCalculator {
             default:
                 character.setExperiencePoint(230001 + ((character.getLevel() - 13) * 62000));
                 character.setXpForNextLevel(62000);
+                break;
+        }
+    }
+
+    private void WitchXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(151);
+                break;
+            case 2:
+                character.setExperiencePoint(151);
+                character.setXpForNextLevel(150);
+                break;
+            case 3:
+                character.setExperiencePoint(301);
+                character.setXpForNextLevel(300);
+                break;
+            case 4:
+                character.setExperiencePoint(601);
+                character.setXpForNextLevel(400);
+                break;
+            case 5:
+                character.setExperiencePoint(1001);
+                character.setXpForNextLevel(1000);
+                break;
+            case 6:
+                character.setExperiencePoint(2001);
+                character.setXpForNextLevel(2000);
+                break;
+            case 7:
+                character.setExperiencePoint(4001);
+                character.setXpForNextLevel(5000);
+                break;
+            case 8:
+                character.setExperiencePoint(9001);
+                character.setXpForNextLevel(8000);
+                break;
+            case 9:
+                character.setExperiencePoint(17001);
+                character.setXpForNextLevel(21500);
+                break;
+            case 10:
+                character.setExperiencePoint(38501);
+                character.setXpForNextLevel(20000);
+                break;
+            case 11:
+                character.setExperiencePoint(58501);
+                character.setXpForNextLevel(20000);
+                break;
+            case 12:
+                character.setExperiencePoint(785001);
+                character.setXpForNextLevel(30000);
+                break;
+
+            default:
+                character.setExperiencePoint(108501 + ((character.getLevel() - 13) * 31500));
+                character.setXpForNextLevel(31500);
+                break;
+        }
+    }
+
+    private void WitchMasterXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(201);
+                break;
+            case 2:
+                character.setExperiencePoint(201);
+                character.setXpForNextLevel(200);
+                break;
+            case 3:
+                character.setExperiencePoint(401);
+                character.setXpForNextLevel(400);
+                break;
+            case 4:
+                character.setExperiencePoint(801);
+                character.setXpForNextLevel(800);
+                break;
+            case 5:
+                character.setExperiencePoint(1601);
+                character.setXpForNextLevel(2400);
+                break;
+            case 6:
+                character.setExperiencePoint(4001);
+                character.setXpForNextLevel(4000);
+                break;
+            case 7:
+                character.setExperiencePoint(8001);
+                character.setXpForNextLevel(8000);
+                break;
+            case 8:
+                character.setExperiencePoint(16001);
+                character.setXpForNextLevel(16000);
+                break;
+            case 9:
+                character.setExperiencePoint(32001);
+                character.setXpForNextLevel(27000);
+                break;
+            case 10:
+                character.setExperiencePoint(59001);
+                character.setXpForNextLevel(31500);
+                break;
+            case 11:
+                character.setExperiencePoint(90501);
+                character.setXpForNextLevel(49500);
+                break;
+            case 12:
+                character.setExperiencePoint(140001);
+                character.setXpForNextLevel(50000);
+                break;
+
+            default:
+                character.setExperiencePoint(190001 + ((character.getLevel() - 13) * 55000));
+                character.setXpForNextLevel(55000);
+                break;
+        }
+    }
+
+    private void FireMageXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(171);
+                break;
+            case 2:
+                character.setExperiencePoint(171);
+                character.setXpForNextLevel(180);
+                break;
+            case 3:
+                character.setExperiencePoint(351);
+                character.setXpForNextLevel(350);
+                break;
+            case 4:
+                character.setExperiencePoint(701);
+                character.setXpForNextLevel(800);
+                break;
+            case 5:
+                character.setExperiencePoint(1501);
+                character.setXpForNextLevel(1500);
+                break;
+            case 6:
+                character.setExperiencePoint(3001);
+                character.setXpForNextLevel(4000);
+                break;
+            case 7:
+                character.setExperiencePoint(7001);
+                character.setXpForNextLevel(5000);
+                break;
+            case 8:
+                character.setExperiencePoint(12001);
+                character.setXpForNextLevel(10000);
+                break;
+            case 9:
+                character.setExperiencePoint(22001);
+                character.setXpForNextLevel(30500);
+                break;
+            case 10:
+                character.setExperiencePoint(52501);
+                character.setXpForNextLevel(33000);
+                break;
+            case 11:
+                character.setExperiencePoint(85501);
+                character.setXpForNextLevel(49500);
+                break;
+            case 12:
+                character.setExperiencePoint(135001);
+                character.setXpForNextLevel(40500);
+                break;
+
+            default:
+                character.setExperiencePoint(175501 + ((character.getLevel() - 13) * 58500));
+                character.setXpForNextLevel(58500);
+                break;
+        }
+    }
+
+    private void WizardXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(231);
+                break;
+            case 2:
+                character.setExperiencePoint(231);
+                character.setXpForNextLevel(270);
+                break;
+            case 3:
+                character.setExperiencePoint(501);
+                character.setXpForNextLevel(500);
+                break;
+            case 4:
+                character.setExperiencePoint(1001);
+                character.setXpForNextLevel(1200);
+                break;
+            case 5:
+                character.setExperiencePoint(2201);
+                character.setXpForNextLevel(2800);
+                break;
+            case 6:
+                character.setExperiencePoint(5001);
+                character.setXpForNextLevel(5000);
+                break;
+            case 7:
+                character.setExperiencePoint(10001);
+                character.setXpForNextLevel(8000);
+                break;
+            case 8:
+                character.setExperiencePoint(18001);
+                character.setXpForNextLevel(17000);
+                break;
+            case 9:
+                character.setExperiencePoint(35001);
+                character.setXpForNextLevel(35000);
+                break;
+            case 10:
+                character.setExperiencePoint(70001);
+                character.setXpForNextLevel(80000);
+                break;
+            case 11:
+                character.setExperiencePoint(150001);
+                character.setXpForNextLevel(50000);
+                break;
+            case 12:
+                character.setExperiencePoint(200001);
+                character.setXpForNextLevel(100000);
+                break;
+
+            default:
+                character.setExperiencePoint(300001 + ((character.getLevel() - 13) * 80000));
+                character.setXpForNextLevel(80000);
                 break;
         }
     }
