@@ -35,6 +35,18 @@ public class UserDAO {
         }
     }
 
+    public void deleteUserByName(String name) throws UserAlredyExistException {
+        Session session = factory.openSession();
+        session.beginTransaction();
+
+        Query query = session.createQuery("delete from User WHERE name = :name");
+        query.setParameter("name", name);
+
+        query.executeUpdate();
+
+        session.close();
+    }
+
     public User loginUser(String name, String password) throws WrongUserNameOrPasswordException {
         Session session = factory.openSession();
         session.beginTransaction();

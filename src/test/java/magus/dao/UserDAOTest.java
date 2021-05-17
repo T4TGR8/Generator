@@ -36,16 +36,17 @@ public class UserDAOTest {
     }
 
     @Test(expected = NoCharactersException.class)
-    public  void testReadUserWithoutCharacters() throws NoCharactersException{
+    public void testReadUserWithoutCharacters() throws NoCharactersException {
         dao.readUser("TestUser2", "1234##");
     }
 
-    @Test
-    public void testUserOneToManyCharacters() throws UserAlredyExistException {
+    @Test(expected = UserAlredyExistException.class) // TestID: 1
+    public void testAddUserThrowsUserAlreadyExist() throws UserAlredyExistException {
 
         User user = new User();
         user.setName("user");
         user.setPassword("jelszó");
+        user.addCharacter(new Character());
 
         Character c1 = new Character();
         c1.setName("name1");
@@ -63,6 +64,7 @@ public class UserDAOTest {
         c2.setUser(user);
 
         dao.createUser(user);
+
     }
 
     @Test
@@ -140,7 +142,7 @@ public class UserDAOTest {
     }
 
     @Test
-    public void testSelectUser() throws NoCharactersException{
+    public void testSelectUser() throws NoCharactersException {
 
         User user = null;
         try {

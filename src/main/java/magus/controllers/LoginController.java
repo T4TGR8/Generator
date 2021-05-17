@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class LoginController {
 
-    UserDAO UD;
+    UserDAO UD  = new UserDAO();
 
     @FXML
     private TextField tb_Username;
