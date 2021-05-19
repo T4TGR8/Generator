@@ -17,7 +17,9 @@
 |  13 | Főjellemző teszt | Unit teszt | Sikeres |
 |  14 | Enum megjelenitése stringként teszt | Unit teszt | Sikeres |
 |  15 | Psy alapérték teszt | Unit teszt | Sikeres |
-
-
-
-
+|  16 | Kétszer nem lehet regisztrálni usert | Unit teszt | Sikeres |
+|  17 | Nem létező felhasználóval nem lehet bejelentkezni | Unit teszt | Sikeres |
+|  18 | Login metódus működése | Unit teszt | Sikeres |
+|  19 | User karaktereinek lekérése | Unit teszt | Sikeres |
+|  20 | User karakterek nélkül exception dobása | Unit teszt | Sikeres |
+|  21 | User kiválasztás | Unit teszt | Sikeres |
