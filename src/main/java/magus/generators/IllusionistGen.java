@@ -4,7 +4,7 @@ import magus.exceptions.InvalidAttributeException;
 import magus.model.Character;
 import magus.model.*;
 
-public class IllusionistGen extends CharacterGenerator {
+public class IllusionistGen extends CharacterGenerator implements CharacterGen {
 
     Attributes atr = character.getAttributes();
     CombatStatistics stat = character.getStatistics();
