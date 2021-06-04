@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class QuickGeneratorController implements Initializable {
+public class QuickGeneratorController implements Initializable, GeneratorContoller {
 
     @FXML
     private TextField textField_characterName;
@@ -105,7 +105,7 @@ public class QuickGeneratorController implements Initializable {
         window.setScene(scene);
     }
 
-    private void setCharacterProperties() {
+    public void setCharacterProperties() {
         character.setName(textField_characterName.getText());
         character.setCaste(Caste.getCasteByString(choiceBoxCaste.getSelectionModel().getSelectedItem()));
         character.setRace(Race.getRaceByString(choiceBoxRace.getSelectionModel().getSelectedItem()));

@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ManualGeneratorController implements Initializable {
+public class ManualGeneratorController implements Initializable, GeneratorContoller {
 
     @FXML
     private TextField textField_characterName;
@@ -382,7 +382,7 @@ public class ManualGeneratorController implements Initializable {
         hpr.setPainResistancePointsPerLevel(spinnerPainResistancePerLevel.getValue());
     }
 
-    private void setCharacterProperties() {
+    public void setCharacterProperties() {
 
         character.setName(textField_characterName.getText());
         character.setCaste(Caste.getCasteByString(choiceBoxCaste.getSelectionModel().getSelectedItem()));
