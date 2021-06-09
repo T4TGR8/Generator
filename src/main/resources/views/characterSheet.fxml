@@ -322,42 +322,42 @@
 
             <!-- Pszi értékek -->
 
-            <Label fx:id="psySchoolType" layoutX="205" layoutY="815" text="asdfg">
+            <Label fx:id="psySchoolType" layoutX="205" layoutY="815" text="Iskola">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="psyUsageGrade" layoutX="225" layoutY="845" text="-1">
+            <Label fx:id="psyUsageGrade" layoutX="225" layoutY="845" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="psyUsageLevel" layoutX="240" layoutY="880" text="-1">
+            <Label fx:id="psyUsageLevel" layoutX="240" layoutY="880" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="basePsyPoint" layoutX="135" layoutY="928" text="-1">
+            <Label fx:id="basePsyPoint" layoutX="135" layoutY="928" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="maxPsyPointPerLevel" layoutX="165" layoutY="965" text="-1">
+            <Label fx:id="maxPsyPointPerLevel" layoutX="165" layoutY="965" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="psyPointPerLevel" layoutX="310" layoutY="928" text="-1">
+            <Label fx:id="psyPointPerLevel" layoutX="310" layoutY="928" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="xpPerPsyPoint" layoutX="300" layoutY="965" text="-1">
+            <Label fx:id="xpPerPsyPoint" layoutX="300" layoutY="965" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>
             </Label>
-            <Label fx:id="psyPoints" layoutX="215" layoutY="1015" text="-1">
+            <Label fx:id="psyPoints" layoutX="215" layoutY="1015" text="0">
                 <font>
                     <Font name="System Bold" size="22.0"/>
                 </font>

@@ -274,14 +274,14 @@ public class CharacterSheetController implements Initializable {
         combatModifierAim.setText(String.valueOf(allModifiers[3] * character.getLevel()));
 
 
-        psySchoolType.setText(psy.getPsySchool().name().toLowerCase());
-        psyUsageLevel.setText(String.valueOf(psy.getUsageLevel()));
-        psyUsageGrade.setText(String.valueOf(psy.getUsageGrade()));
-        basePsyPoint.setText(String.valueOf(psy.getBasePsyPoint()));
-        psyPointPerLevel.setText(String.valueOf(psy.getPsyPointPerLevel()));
-        maxPsyPointPerLevel.setText(String.valueOf(psy.getMaxPsyPointPerLevel()));
-        xpPerPsyPoint.setText(String.valueOf(psy.getXpPerPsyPoint()));
-        psyPoints.setText(String.valueOf(psy.getPsyPoints()));
+        //psySchoolType.setText(psy.getPsySchool().name().toLowerCase());
+        //psyUsageLevel.setText(String.valueOf(psy.getUsageLevel()));
+        //psyUsageGrade.setText(String.valueOf(psy.getUsageGrade()));
+        //basePsyPoint.setText(String.valueOf(psy.getBasePsyPoint()));
+        //psyPointPerLevel.setText(String.valueOf(psy.getPsyPointPerLevel()));
+        //maxPsyPointPerLevel.setText(String.valueOf(psy.getMaxPsyPointPerLevel()));
+        //xpPerPsyPoint.setText(String.valueOf(psy.getXpPerPsyPoint()));
+        //psyPoints.setText(String.valueOf(psy.getPsyPoints()));
 
 
         staticAstralMagicShield.setText(String.valueOf(psy.getStaticAstralMagicShield()));
