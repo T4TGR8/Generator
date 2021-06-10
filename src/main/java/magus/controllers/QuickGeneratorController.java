@@ -1,84 +1,19 @@
 package magus.controllers;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.stage.Stage;
 import magus.Main;
 import magus.model.*;
-import magus.model.Character;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class QuickGeneratorController implements Initializable, GeneratorContoller {
-
-    @FXML
-    private TextField textField_characterName;
-    @FXML
-    private ChoiceBox<String> choiceBoxCaste;
-    @FXML
-    private ChoiceBox<String> choiceBoxRace;
-    @FXML
-    private ChoiceBox<String> choiceBoxPersonality;
-    @FXML
-    private ChoiceBox<String> choiceBoxReligion;
-    @FXML
-    private TextField textField_characterBirthplace;
-    @FXML
-    private TextField textField_characterSchool;
-    @FXML
-    private Spinner<Integer> spinnerLevel;
-    @FXML
-    private Spinner<Integer> spinnerAge;
-    @FXML
-    private Button buttonGenerate;
-    @FXML
-    private Button buttonBack;
-
-    private Character character;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        for (Caste c : Caste.values())
-            choiceBoxCaste.getItems().add(c.getCasteName());
-
-        for (Race r : Race.values())
-            choiceBoxRace.getItems().add(r.getRaceString());
-
-        for (Personality p : Personality.values())
-            choiceBoxPersonality.getItems().add(p.getPersonalityString());
-
-        for (Religion r : Religion.values())
-            choiceBoxReligion.getItems().add(r.getReligionString());
-
-        spinnerLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1));
-        spinnerLevel.setEditable(true);
-
-        choiceBoxRace.valueProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                if (t1 == null) spinnerAge.setEditable(false);
-
-                else {
-                    setAgeSpinnerBoundValues(t1);
-                    spinnerAge.setEditable(true);
-                }
-            }
-        });
-
-        character = new Character();
-    }
+public class QuickGeneratorController extends QuickGeneratorWindowController implements GeneratorController, GeneratorWindowContoller {
 
     @FXML
     public void generateAction() throws IOException {
-
         setCharacterProperties();
 
         Stage window = (Stage) buttonGenerate.getScene().getWindow();
@@ -116,39 +51,4 @@ public class QuickGeneratorController implements Initializable, GeneratorContoll
         character.setLevel(spinnerLevel.getValue());
         character.setAge(spinnerAge.getValue());
     }
-
-    private void setAgeSpinnerBoundValues(String sRace) {
-
-        Race race = Race.getRaceByString(sRace);
-
-        switch (race) {
-            case DWARF:
-                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(25, 760, 1));
-                break;
-
-            case ORC:
-            case KHAAL:
-                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(12, 65, 1));
-                break;
-
-            case ELF:
-                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(30, 2000, 1));
-                break;
-
-            case HALF_ELF:
-            case GNOME:
-                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(16, 200, 1));
-                break;
-
-            case DZSENN:
-                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(19, 240, 1));
-                break;
-
-
-            default:
-                spinnerAge.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(13, 80, 1));
-                break;
-        }
-    }
-
 }
