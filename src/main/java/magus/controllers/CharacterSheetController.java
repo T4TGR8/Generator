@@ -167,7 +167,8 @@ public class CharacterSheetController implements Initializable {
 
 
     private Character character;
-    private CharacterGenerator gen;
+    //private CharacterGenerator gen;
+    private CharacterFactory factory = new CharacterFactory();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -180,7 +181,7 @@ public class CharacterSheetController implements Initializable {
     public void setCharacter(Character character) {
         this.character = character;
 
-        generateCharacterFromCaste();
+        factory.createCharacter(this.character);
 
         setLabels();
     }
@@ -297,7 +298,7 @@ public class CharacterSheetController implements Initializable {
         actualXp.setText(String.valueOf(character.getExperiencePoint()));
         xpForNextLevel.setText(String.valueOf(character.getXpForNextLevel()));
     }
-
+/*
     private void generateCharacterFromCaste() {
 
         switch (character.getCaste()) {
@@ -378,5 +379,5 @@ public class CharacterSheetController implements Initializable {
                 gen.spendCharacterCreationPoints();
                 break;
         }
-    }
+    }*/
 }

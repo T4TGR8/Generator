@@ -6,7 +6,7 @@ import magus.modifiers.attribmods.SummarizedAttributeModifiers;
 import magus.modifiers.combatstatmods.CombatPointModifiers;
 import magus.modifiers.healthstatmods.HpAndRpModifiers;
 
-public abstract class CharacterGenerator {
+public abstract class CharacterGenerator implements CharacterGen{
 
     private CharacterPointSpenders cps;
     private SummarizedAttributeModifiers sam;
@@ -37,8 +37,6 @@ public abstract class CharacterGenerator {
         return character;
     }
 
-    public abstract void spendBasePoints() throws InvalidAttributeException;
-
     public CharacterGenerator(Character character) {
         this.character = character;
         cps = new CharacterPointSpenders(character);
@@ -48,7 +46,5 @@ public abstract class CharacterGenerator {
         prf = new PsyRelatedFunctions(character);
         ec = new ExperienceCalculator(character);
     }
-
-    public abstract int Kap();
 
 }
