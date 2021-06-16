@@ -52,7 +52,7 @@ public class CombatPointModifiersTest {
 
         int ap = character.getStatistics().getBaseAttackPoints();
 
-        paladin.spendCharacterCreationPoints();
+        paladin.spendCharacterCreationPoints(paladin);
 
         int apRandomIncrease = character.getStatistics().getBaseAttackPoints() - ap;
 
@@ -68,7 +68,7 @@ public class CombatPointModifiersTest {
 
         PaladinGen gen = new PaladinGen(paladin);
         gen.spendBasePoints();
-        gen.spendCharacterCreationPoints();
+        gen.spendCharacterCreationPoints(gen);
         cpm.modifyCombatStats(paladin.getStatistics(), paladin.getAttributes());
 
         int[] mods = cpm.combatModifierSpender(paladin.getStatistics().getCombatModifierPerLevel(), paladin.getCaste());

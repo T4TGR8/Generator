@@ -49,4 +49,63 @@ public class AmazonGen extends CharacterGenerator implements CharacterGen {
 
     }
 
+    @Override
+    public void calculateXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(186);
+                break;
+            case 2:
+                character.setExperiencePoint(186);
+                character.setXpForNextLevel(187);
+                break;
+            case 3:
+                character.setExperiencePoint(373);
+                character.setXpForNextLevel(372);
+                break;
+            case 4:
+                character.setExperiencePoint(745);
+                character.setXpForNextLevel(744);
+                break;
+            case 5:
+                character.setExperiencePoint(1489);
+                character.setXpForNextLevel(1488);
+                break;
+            case 6:
+                character.setExperiencePoint(2977);
+                character.setXpForNextLevel(2976);
+                break;
+            case 7:
+                character.setExperiencePoint(5953);
+                character.setXpForNextLevel(5948);
+                break;
+            case 8:
+                character.setExperiencePoint(11901);
+                character.setXpForNextLevel(11900);
+                break;
+            case 9:
+                character.setExperiencePoint(23801);
+                character.setXpForNextLevel(23800);
+                break;
+            case 10:
+                character.setExperiencePoint(47601);
+                character.setXpForNextLevel(23800);
+                break;
+            case 11:
+                character.setExperiencePoint(71401);
+                character.setXpForNextLevel(29600);
+                break;
+            case 12:
+                character.setExperiencePoint(101001);
+                character.setXpForNextLevel(50000);
+                break;
+
+            default:
+                character.setExperiencePoint(151001 + ((character.getLevel() - 13) * 40500));
+                character.setXpForNextLevel(40500);
+                break;
+        }
+    }
+
 }

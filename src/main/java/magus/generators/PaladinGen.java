@@ -48,4 +48,63 @@ public class PaladinGen extends CharacterGenerator implements CharacterGen {
         skills.setSkillPointsPerLevel(3);
     }
 
+    @Override
+    public void calculateXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(176);
+                break;
+            case 2:
+                character.setExperiencePoint(176);
+                character.setXpForNextLevel(177);
+                break;
+            case 3:
+                character.setExperiencePoint(353);
+                character.setXpForNextLevel(368);
+                break;
+            case 4:
+                character.setExperiencePoint(721);
+                character.setXpForNextLevel(780);
+                break;
+            case 5:
+                character.setExperiencePoint(1501);
+                character.setXpForNextLevel(2000);
+                break;
+            case 6:
+                character.setExperiencePoint(3501);
+                character.setXpForNextLevel(3500);
+                break;
+            case 7:
+                character.setExperiencePoint(7001);
+                character.setXpForNextLevel(3500);
+                break;
+            case 8:
+                character.setExperiencePoint(10501);
+                character.setXpForNextLevel(10500);
+                break;
+            case 9:
+                character.setExperiencePoint(21001);
+                character.setXpForNextLevel(27000);
+                break;
+            case 10:
+                character.setExperiencePoint(48001);
+                character.setXpForNextLevel(30000);
+                break;
+            case 11:
+                character.setExperiencePoint(78001);
+                character.setXpForNextLevel(30000);
+                break;
+            case 12:
+                character.setExperiencePoint(108001);
+                character.setXpForNextLevel(30000);
+                break;
+
+            default:
+                character.setExperiencePoint(138001 + ((character.getLevel() - 13) * 38000));
+                character.setXpForNextLevel(38000);
+                break;
+        }
+    }
+
 }

@@ -48,4 +48,63 @@ public class ThiefGen extends CharacterGenerator implements CharacterGen {
         skills.setSkillPointsPerLevel(3);
     }
 
+    @Override
+    public void calculateXP(int level) {
+        switch (level) {
+            case 1:
+                character.setExperiencePoint(0);
+                character.setXpForNextLevel(101);
+                break;
+            case 2:
+                character.setExperiencePoint(101);
+                character.setXpForNextLevel(102);
+                break;
+            case 3:
+                character.setExperiencePoint(203);
+                character.setXpForNextLevel(198);
+                break;
+            case 4:
+                character.setExperiencePoint(401);
+                character.setXpForNextLevel(402);
+                break;
+            case 5:
+                character.setExperiencePoint(803);
+                character.setXpForNextLevel(898);
+                break;
+            case 6:
+                character.setExperiencePoint(1701);
+                character.setXpForNextLevel(2800);
+                break;
+            case 7:
+                character.setExperiencePoint(4501);
+                character.setXpForNextLevel(4500);
+                break;
+            case 8:
+                character.setExperiencePoint(9001);
+                character.setXpForNextLevel(13000);
+                break;
+            case 9:
+                character.setExperiencePoint(22001);
+                character.setXpForNextLevel(24500);
+                break;
+            case 10:
+                character.setExperiencePoint(46501);
+                character.setXpForNextLevel(22000);
+                break;
+            case 11:
+                character.setExperiencePoint(68501);
+                character.setXpForNextLevel(29500);
+                break;
+            case 12:
+                character.setExperiencePoint(98001);
+                character.setXpForNextLevel(33500);
+                break;
+
+            default:
+                character.setExperiencePoint(131501 + ((character.getLevel() - 13) * 33500));
+                character.setXpForNextLevel(33500);
+                break;
+        }
+    }
+
 }
