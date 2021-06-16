@@ -14,7 +14,7 @@ import magus.dao.UserDAO;
 
 import java.io.IOException;
 
-public class LoginController {
+public class LoginController implements ILoginController {
 
     UserDAO UD  = new UserDAO();
 
