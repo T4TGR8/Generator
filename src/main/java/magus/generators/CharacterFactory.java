@@ -1,7 +1,5 @@
 package magus.generators;
 
-import magus.exceptions.InvalidAttributeException;
-import magus.model.Caste;
 import magus.model.Character;
 
 public class CharacterFactory implements CharacterGenFactory {

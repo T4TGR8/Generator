@@ -125,24 +125,6 @@ public class CharacterSheetController implements Initializable, CharacterSheet {
 
 
     @FXML
-    private Label psySchoolType;
-    @FXML
-    private Label psyUsageGrade;
-    @FXML
-    private Label psyUsageLevel;
-    @FXML
-    private Label basePsyPoint;
-    @FXML
-    private Label maxPsyPointPerLevel;
-    @FXML
-    private Label psyPointPerLevel;
-    @FXML
-    private Label xpPerPsyPoint;
-    @FXML
-    private Label psyPoints;
-
-
-    @FXML
     private Label staticAstralMagicShield;
     @FXML
     private Label staticMentalMagicShield;
@@ -272,17 +254,6 @@ public class CharacterSheetController implements Initializable, CharacterSheet {
         combatModifierAp.setText(String.valueOf(allModifiers[1] * character.getLevel()));
         combatModifierDef.setText(String.valueOf(allModifiers[2] * character.getLevel()));
         combatModifierAim.setText(String.valueOf(allModifiers[3] * character.getLevel()));
-
-
-        //psySchoolType.setText(psy.getPsySchool().name().toLowerCase());
-        //psyUsageLevel.setText(String.valueOf(psy.getUsageLevel()));
-        //psyUsageGrade.setText(String.valueOf(psy.getUsageGrade()));
-        //basePsyPoint.setText(String.valueOf(psy.getBasePsyPoint()));
-        //psyPointPerLevel.setText(String.valueOf(psy.getPsyPointPerLevel()));
-        //maxPsyPointPerLevel.setText(String.valueOf(psy.getMaxPsyPointPerLevel()));
-        //xpPerPsyPoint.setText(String.valueOf(psy.getXpPerPsyPoint()));
-        //psyPoints.setText(String.valueOf(psy.getPsyPoints()));
-
 
         staticAstralMagicShield.setText(String.valueOf(psy.getStaticAstralMagicShield()));
         staticMentalMagicShield.setText(String.valueOf(psy.getStaticMentalMagicShield()));

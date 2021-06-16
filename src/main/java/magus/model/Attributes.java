@@ -19,8 +19,6 @@ public class Attributes {
 
     Character character;
 
-    private SummarizedAttributeModifiers summ;
-
     public int getId() {
         return id;
     }
@@ -139,13 +137,6 @@ public class Attributes {
     }
 
 
-    public SummarizedAttributeModifiers getSumm() {
-        return summ;
-    }
-
-    public void setSumm(SummarizedAttributeModifiers summ) {
-        this.summ = summ;
-    }
 
     public Attributes() {
 

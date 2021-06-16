@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public interface GeneratorWindowContoller {
-    public void generateAction() throws IOException;
+    void generateAction() throws IOException;
 
-    public void backButtonAction() throws IOException;
+    void backButtonAction() throws IOException;
 }
