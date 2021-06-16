@@ -1,5 +1,6 @@
 package magus.modifiers.healthstatmods;
 
+import magus.generators.CharacterGen;
 import magus.model.Attributes;
 import magus.model.Caste;
 import magus.model.HealthAndPainRes;
@@ -36,50 +37,7 @@ public class HpAndRpModifiers {
 
 
     // data required values are not accurate
-    public int painResistancePontForXP(Caste caste) {
-
-        switch (caste) {
-            case WARRIOR:
-            case MARTIAL_ARTIST:
-            case SWORD_ARTIST:
-                return 10;
-
-            case GLADIATOR:
-            case BARBARIAN:
-            case PSY_MASTER:
-            case PALADIN:
-                return 12;
-
-            case HEADHUNTER:
-            case AMAZON:
-            case WITCH_MASTER:
-                return 13;
-
-            case KNIGHT:
-                return 15;
-
-            case DUELER:
-                return 14;
-
-            case THIEF:
-            case WITCH:
-                return 25;
-
-            case BARD:
-            case FIRE_MAGE:
-                return 30;
-
-            case ILLUSIONIST:
-                return 27;
-
-            case PRIEST:
-                return 20;
-
-            case WIZARD:
-                return 40;
-
-            default:
-                return 0;
-        }
+    public int painResistancePontForXP(CharacterGen characterGen) {
+        return characterGen.painResistancePontForXP();
     }
 }

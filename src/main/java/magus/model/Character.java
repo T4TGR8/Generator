@@ -1,5 +1,7 @@
 package magus.model;
 
+import magus.generators.CharacterGen;
+
 public class Character {
     int id;
 
@@ -15,6 +17,7 @@ public class Character {
     int level;
     int experiencePoint;
     int xpForNextLevel;
+    CharacterGen characterGen;
 
     User user;
 
@@ -39,6 +42,10 @@ public class Character {
     public void setName(String name) {
         this.name = name;
     }
+
+    public CharacterGen getCharacterGen() { return characterGen; }
+
+    public void setCharacterGen(CharacterGen characterGen) { this.characterGen = characterGen; }
 
     public Caste getCaste() {
         return caste;

@@ -1,5 +1,6 @@
 package magus.modifiers.combatstatmods;
 
+import magus.generators.CharacterGen;
 import magus.model.Attributes;
 import magus.model.Caste;
 import magus.model.CombatStatistics;
@@ -58,48 +59,11 @@ public class CombatPointModifiers {
         stat.setAimingPoints(stat.getBaseAimingPoints() + AimingPointModifiers(dex));
     }
 
-    public int[] combatModifierSpender(int combatModifier, Caste caste) {
-        Random rnd = new Random();
-        boolean isMelee = rnd.nextBoolean();
-
-        switch (caste) {
-            // közelharcosok
-            case KNIGHT:
-            case PALADIN:
-            case SWORD_ARTIST:
-            case MARTIAL_ARTIST:
-            case BARBARIAN:
-            case DUELER:
-            case GLADIATOR:
-                return meleeModifiers(combatModifier);
-
-            // távolsági vagy közelharcos (random alapján)
-            case WARRIOR:
-            case AMAZON:
-            case THIEF:
-            case BARD:
-            case HEADHUNTER:
-            case WIZARD:
-            case WITCH:
-            case PRIEST:
-            case WITCH_MASTER:
-            case PSY_MASTER:
-            case FIRE_MAGE:
-            case ILLUSIONIST:
-                if (isMelee)
-                    return meleeModifiers(combatModifier);
-                else
-                    return rangerModifier(combatModifier);
-
-            default:
-                return new int[]{0, 0, 0, 0};
-
-        }
-
-
+    public int[] combatModifierSpender(int combatModifier, CharacterGen characterGen) {
+        return characterGen.weaponTypeMidifiers(combatModifier);
     }
 
-    private int[] meleeModifiers(int combatModifier) {
+    public int[] meleeModifiers(int combatModifier) {
 
         switch (combatModifier) {
 
@@ -147,7 +111,7 @@ public class CombatPointModifiers {
 
     }
 
-    private int[] rangerModifier(int combatModifier) {
+    public int[] rangerModifier(int combatModifier) {
         switch (combatModifier) {
 
             case 3:

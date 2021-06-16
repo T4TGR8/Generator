@@ -182,7 +182,7 @@ public class CharacterSheetController implements Initializable, CharacterSheet {
         HealthAndPainRes HPR = character.getHealthAndPainRes();
         Psy psy = character.getPsy();
 
-        int[] allModifiers = cpm.combatModifierSpender(stat.getCombatModifierPerLevel(), character.getCaste());
+        int[] allModifiers = cpm.combatModifierSpender(stat.getCombatModifierPerLevel(), character.getCharacterGen());
 
 
         labelName.setText(character.getName());
@@ -241,7 +241,7 @@ public class CharacterSheetController implements Initializable, CharacterSheet {
         basePain.setText(String.valueOf(HPR.getBasePainResistancePoints()));
         maxPain.setText(String.valueOf(HPR.getMaxPainResistancePoints()));
         PainResPerLevel.setText(String.valueOf(HPR.getPainResistancePointsPerLevel()));
-        XpPerPainResPoint.setText(String.valueOf(hpm.painResistancePontForXP(character.getCaste())));
+        XpPerPainResPoint.setText(String.valueOf(hpm.painResistancePontForXP(character.getCharacterGen())));
 
 
         combatModifierPerLevel.setText(String.valueOf(stat.getCombatModifierPerLevel()));

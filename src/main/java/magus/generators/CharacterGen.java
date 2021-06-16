@@ -16,4 +16,8 @@ public interface CharacterGen {
     void setPsyPointPerLevel(Psy psy);
     void setMaxPsyPointPerLevel(Psy psy);
     void setXpPerPsyPoint(Psy psy);
+
+    int painResistancePontForXP();
+
+    int[] weaponTypeMidifiers(int combatModifier);
 }

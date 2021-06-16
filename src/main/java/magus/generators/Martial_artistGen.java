@@ -3,6 +3,7 @@ package magus.generators;
 import magus.exceptions.InvalidAttributeException;
 import magus.model.Character;
 import magus.model.*;
+import magus.modifiers.combatstatmods.CombatPointModifiers;
 
 public class Martial_artistGen extends CharacterGenerator implements CharacterGen {
 
@@ -137,4 +138,13 @@ public class Martial_artistGen extends CharacterGenerator implements CharacterGe
         psy.setXpPerPsyPoint(25);
     }
 
+    @Override
+    public int painResistancePontForXP() { return 10; }
+
+    CombatPointModifiers combatPointModifiers = new CombatPointModifiers();
+
+    @Override
+    public int[] weaponTypeMidifiers(int combatModifier) {
+        return combatPointModifiers.meleeModifiers(combatModifier);
+    }
 }
