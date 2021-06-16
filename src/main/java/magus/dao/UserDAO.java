@@ -12,14 +12,14 @@ import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 
-public class UserDAO {
+public class UserDAO implements IUserDAO{
     private static SessionFactory factory;
 
     public UserDAO() {
         factory = new Configuration().configure().buildSessionFactory();
     }
 
-    public void createUser(User user) throws UserAlredyExistException {
+    public void createUser(User user) throws UserAlredyExistException{
         Session session = factory.openSession();
 
         try {

@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class CharacterDAO {
+public class CharacterDAO implements ICharacterDAO{
     private static SessionFactory factory;
 
     public CharacterDAO() {

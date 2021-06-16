@@ -14,7 +14,7 @@ import magus.modifiers.healthstatmods.HpAndRpModifiers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CharacterSheetController implements Initializable {
+public class CharacterSheetController implements Initializable, CharacterSheet {
     @FXML
     private Pane pane;
 
@@ -191,7 +191,7 @@ public class CharacterSheetController implements Initializable {
         setLabels();
     }
 
-    private void setLabels() {
+    public void setLabels() {
         CombatPointModifiers cpm = new CombatPointModifiers();
         HpAndRpModifiers hpm = new HpAndRpModifiers();
 
