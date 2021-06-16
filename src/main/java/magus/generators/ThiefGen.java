@@ -107,4 +107,33 @@ public class ThiefGen extends CharacterGenerator implements CharacterGen {
         }
     }
 
+    @Override
+    public void setPsySchool(Psy psy) {
+        psy.setPsySchool(PsySchool.NINCS);
+    }
+
+    @Override
+    public void setBasePsyPoint(Psy psy) {
+        psy.setBasePsyPoint(0);
+    }
+
+    @Override
+    public void setUsageGrade(Psy psy) {
+        psy.setUsageGrade(0);
+    }
+
+    @Override
+    public void setPsyPointPerLevel(Psy psy) {
+        psy.setPsyPointPerLevel(0);
+    }
+
+    @Override
+    public void setMaxPsyPointPerLevel(Psy psy) {
+        psy.setMaxPsyPointPerLevel(0);
+    }
+
+    @Override
+    public void setXpPerPsyPoint(Psy psy) {
+        psy.setXpPerPsyPoint(0);
+    }
 }

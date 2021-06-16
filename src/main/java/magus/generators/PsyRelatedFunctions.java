@@ -17,55 +17,13 @@ public class PsyRelatedFunctions {
         this.atr = character.getAttributes();
     }
 
-    private void setPsy(Caste caste) {
-
-        switch (caste) {
-            case WIZARD:
-                psy.setPsySchool(PsySchool.KYR);
-                psy.setBasePsyPoint(3);
-                psy.setUsageGrade(4);
-                psy.setPsyPointPerLevel(1);
-                psy.setMaxPsyPointPerLevel(7);
-                psy.setXpPerPsyPoint(30);
-                break;
-
-            case MARTIAL_ARTIST:
-            case SWORD_ARTIST:
-                psy.setPsySchool(PsySchool.SLAN);
-                psy.setBasePsyPoint(1);
-                psy.setUsageGrade(4);
-                psy.setPsyPointPerLevel(3);
-                psy.setMaxPsyPointPerLevel(5);
-                psy.setXpPerPsyPoint(25);
-                break;
-
-            case PSY_MASTER:
-                psy.setPsySchool(PsySchool.PYAR);
-                psy.setBasePsyPoint(1);
-                psy.setUsageGrade(4);
-                psy.setPsyPointPerLevel(0);
-                psy.setMaxPsyPointPerLevel(5);
-                psy.setXpPerPsyPoint(30);
-                break;
-            case FIRE_MAGE:
-                psy.setPsySchool(PsySchool.PYAR);
-                psy.setBasePsyPoint(1);
-                psy.setUsageGrade(3);
-                psy.setPsyPointPerLevel(0);
-                psy.setMaxPsyPointPerLevel(5);
-                psy.setXpPerPsyPoint(30);
-                break;
-
-            default:
-                psy.setPsySchool(PsySchool.NINCS);
-                psy.setUsageGrade(0);
-                psy.setUsageGrade(0);
-                psy.setPsyPointPerLevel(0);
-                psy.setMaxPsyPointPerLevel(0);
-                psy.setXpPerPsyPoint(0);
-                break;
-        }
-
+    private void setPsy(CharacterGen characterGen) {
+        characterGen.setPsySchool(psy);
+        characterGen.setBasePsyPoint(psy);
+        characterGen.setUsageGrade(psy);
+        characterGen.setPsyPointPerLevel(psy);
+        characterGen.setMaxPsyPointPerLevel(psy);
+        characterGen.setXpPerPsyPoint(psy);
     }
 
     private void setBasePsyPoint(int intelligence) {
@@ -104,8 +62,8 @@ public class PsyRelatedFunctions {
                 psy.getMiscMentalMagicShield() + psy.getStaticMentalMagicShield());
     }
 
-    public void modifyPsy() {
-        setPsy(character.getCaste());
+    public void modifyPsy(CharacterGen characterGen) {
+        setPsy(characterGen);
 
         psy.setUsageLevel(psy.getPsySchool() != PsySchool.NINCS
                 ? character.getLevel()

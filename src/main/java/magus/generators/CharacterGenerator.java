@@ -21,11 +21,11 @@ public abstract class CharacterGenerator implements CharacterGen{
         try {
 
             spendBasePoints();
-            cps.spendCharacterSpecPoints(Kap());
+            cps.spendCharacterSpecPoints(characterGen.Kap());
             sam.modifyAttribute(character.getAttributes(), character.getRace(), character.getAge());
             cpm.modifyCombatStats(character.getStatistics(), character.getAttributes());
             hpm.modifyHealthAndPain(character.getHealthAndPainRes(), character.getAttributes(), character.getLevel());
-            prf.modifyPsy();
+            prf.modifyPsy(characterGen);
             ec.calculateXP(characterGen);
 
         } catch (InvalidAttributeException e) {

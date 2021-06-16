@@ -107,4 +107,32 @@ public class Sword_artistGen extends CharacterGenerator implements CharacterGen 
         }
     }
 
+    @Override
+    public void setPsySchool(Psy psy) {
+        psy.setPsySchool(PsySchool.SLAN);
+    }
+
+    @Override
+    public void setBasePsyPoint(Psy psy) { psy.setBasePsyPoint(1); }
+
+    @Override
+    public void setUsageGrade(Psy psy) {
+        psy.setUsageGrade(4);
+    }
+
+    @Override
+    public void setPsyPointPerLevel(Psy psy) {
+        psy.setPsyPointPerLevel(3);
+    }
+
+    @Override
+    public void setMaxPsyPointPerLevel(Psy psy) {
+        psy.setMaxPsyPointPerLevel(5);
+    }
+
+    @Override
+    public void setXpPerPsyPoint(Psy psy) {
+        psy.setXpPerPsyPoint(25);
+    }
+
 }

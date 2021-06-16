@@ -20,7 +20,7 @@ public class PsyRelatedFunctionsTest {
 
         PsyRelatedFunctions prf = new PsyRelatedFunctions(character);
 
-        prf.modifyPsy();
+        //prf.modifyPsy();
 
         Assert.assertEquals(8, character.getPsy().getBasePsyPoint());
     }
